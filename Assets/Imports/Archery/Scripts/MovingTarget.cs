@@ -16,8 +16,11 @@ public class MovingTarget : MonoBehaviour, IHittable
     [SerializeField]
     private float arriveThreshold, movementRadius = 2, speed = 1;
     
-    [SerializeField] private TargetScriptable _targetScriptable;
+    [SerializeField] private Target _target;
+    
+    public delegate void ArcheryEvents();
 
+    public static event ArcheryEvents OnCheckArchery;
 
     private void Awake()
     {
@@ -41,11 +44,13 @@ public class MovingTarget : MonoBehaviour, IHittable
 
     public void GetHit()
     {
-        _targetScriptable.hp--;
-        if(_targetScriptable.hp <= 0)
+        _target.hp--;
+        if(_target.hp <= 0)
         {
             rb.isKinematic = false;
             stopped = true;
+            _target.targetCompleted = true;
+            OnCheckArchery?.Invoke();
         }
     }
 
@@ -62,6 +67,7 @@ public class MovingTarget : MonoBehaviour, IHittable
             rb.MovePosition(transform.position + direction.normalized * Time.fixedDeltaTime * speed);
         }
     }
+    
 }
 
 public interface IHittable

@@ -5,18 +5,30 @@ using UnityEngine;
 
 public class ScoreArchery : MonoBehaviour
 {
-    public HubPrincipal hubPrincipal;
-    public Epreuve AirScriptable;
+    [SerializeField] private Epreuve AirScriptable;
+    [SerializeField] private ListeTarget _listeTarget;
+    
+    private void OnEnable()
+    {
+        MovingTarget.OnCheckArchery += CheckArchery;
 
-    
-    public void Won()
-    {
-        AirScriptable.epreuveCompleted = true;
     }
-    
-    private void OnTriggerEnter(Collider other)
+    private void OnDisable()
     {
-        AirScriptable.epreuveCompleted = true;
-        Debug.Log("Complete");
+        MovingTarget.OnCheckArchery -= CheckArchery;
+
+    }
+
+    private void CheckArchery()
+    {
+        foreach (Target target in _listeTarget.Targets)
+        {
+            if (target.targetCompleted)
+            {
+                AirScriptable.epreuveCompleted = true;
+                Debug.Log("Complete");
+            }
+        }
+
     }
 }

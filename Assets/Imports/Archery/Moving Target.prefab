@@ -100,11 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795dda027b3ec6148b7013e18494595f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
   audioSource: {fileID: 1093948748609010850}
   arriveThreshold: 0.01
   movementRadius: 1
   speed: 0.5
+  _target: {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
+  _scoreArchery: {fileID: 4380783023577840016, guid: 725c6c8946831ab4d968e41d2844f326,
+    type: 3}
 --- !u!54 &8160932611671519673
 Rigidbody:
   m_ObjectHideFlags: 0

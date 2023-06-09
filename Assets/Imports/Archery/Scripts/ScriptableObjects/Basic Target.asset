@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775073e191c43a342879b287145e09da, type: 3}
   m_Name: Basic Target
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 0
+  targetCompleted: 1
