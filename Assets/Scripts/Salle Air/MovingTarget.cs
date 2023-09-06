@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MovingTarget : MonoBehaviour, IHittable
 {
@@ -41,7 +43,7 @@ public class MovingTarget : MonoBehaviour, IHittable
             audioSource.Play();
         }
     }
-
+    
     public void GetHit()
     {
         _target.hp--;
@@ -68,9 +70,11 @@ public class MovingTarget : MonoBehaviour, IHittable
         }
     }
     
+    
 }
 
 public interface IHittable
 {
     void GetHit();
 }
+
