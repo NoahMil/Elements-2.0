@@ -1,50 +1,66 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class VRControllerInput : MonoBehaviour
 {
-    public XRNode inputSource;
+    public XRNode inputSource1;
     public XRNode inputSource2;
-    public InputHelpers.Button inputButton;
+
+    public InputHelpers.Button inputButton1;
     public InputHelpers.Button inputButton2;
+    public InputHelpers.Button inputButton3;
+
     public float InputThreshold = 0.1f;
-    public float snapDistance = 2.0f; // Distance à laquelle le raycast "snape" automatiquement au waypoint
+    public Transform playerTransform;
+    public TeleportWaypoint[] waypoints;
+    private int currentIndex = 0;
+
+    private bool canTeleport = true;
+    private bool hasScrolled = false;
+
 
     void Update()
     {
-        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource), inputButton, out bool isTeleportEnabled, InputThreshold);
-        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton, out bool isJoystickRight, InputThreshold);
-        
-        if (isTeleportEnabled)
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton1, out bool TeleportationPressed,
+            InputThreshold);
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton2, out bool ScrollDown,
+            InputThreshold);
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton3, out bool ScrollUp,
+            InputThreshold);
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            RaycastHit hit;
-            Vector3 raycastDirection = transform.forward;
-
-            if (Physics.Raycast(transform.position, raycastDirection, out hit))
+            if (hasScrolled)
             {
-                TeleportWaypoint waypoint = hit.collider.GetComponent<TeleportWaypoint>();
-                float distanceToWaypoint = Vector3.Distance(transform.position, hit.point);
-
-                if (waypoint != null && waypoint.IsTargeted && distanceToWaypoint < snapDistance)
+                waypoints[currentIndex].TeleportPlayer(playerTransform);
+                foreach (TeleportWaypoint waypoint in waypoints)
                 {
-                    raycastDirection = (waypoint.transform.position - transform.position).normalized;
-                }
-
-                if (Physics.Raycast(transform.position, raycastDirection, out hit))
-                {
-                    waypoint.TeleportPlayer(transform);
+                    waypoint.SetSelected(false);
                 }
             }
         }
 
-        if (isJoystickRight)
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            
+            hasScrolled = true;
+            ScrollWaypoints(1);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            hasScrolled = true;
+            ScrollWaypoints(-1);
         }
     }
 
+    void ScrollWaypoints(int direction)
+    {
+        waypoints[currentIndex].SetSelected(false);
+        currentIndex = (currentIndex + direction + waypoints.Length) % waypoints.Length;
+        waypoints[currentIndex].SetSelected(true);
+    }
 }
+
+
 

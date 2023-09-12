@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TeleportWaypoint : MonoBehaviour
 {
-    public bool IsTargeted { get; private set; }
     public Material normalMaterial;
-    public Material targetedMaterial;
+    public Material selectedMaterial;
     private Renderer waypointRenderer;
+    public float zPositionVariable;
+    private bool isSelected = false;
 
     void Start()
     {
@@ -15,16 +14,15 @@ public class TeleportWaypoint : MonoBehaviour
         waypointRenderer.material = normalMaterial;
     }
 
-    public void SetTargeted(bool targeted)
+    public void SetSelected(bool selected)
     {
-        IsTargeted = targeted;
-        waypointRenderer.material = targeted ? targetedMaterial : normalMaterial;
+        isSelected = selected;
+        waypointRenderer.material = selected ? selectedMaterial : normalMaterial;
     }
 
     public void TeleportPlayer(Transform playerTransform)
     {
-        Vector3 teleportPosition = transform.position + Vector3.up * 2;
-        playerTransform.position = teleportPosition;
+        playerTransform.position  = new Vector3(transform.position.x, transform.position.y, transform.position.z +zPositionVariable);
     }
 }
 
