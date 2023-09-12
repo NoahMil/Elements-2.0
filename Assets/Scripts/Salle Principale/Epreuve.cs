@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 [CreateAssetMenu(fileName = "Nouvelle Epreuve")]
 public class Epreuve : ScriptableObject
 {

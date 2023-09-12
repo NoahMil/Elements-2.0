@@ -7,13 +7,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class VRControllerInput : MonoBehaviour
 {
     public XRNode inputSource;
+    public XRNode inputSource2;
     public InputHelpers.Button inputButton;
+    public InputHelpers.Button inputButton2;
     public float InputThreshold = 0.1f;
     public float snapDistance = 2.0f; // Distance à laquelle le raycast "snape" automatiquement au waypoint
 
     void Update()
     {
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource), inputButton, out bool isTeleportEnabled, InputThreshold);
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton, out bool isJoystickRight, InputThreshold);
         
         if (isTeleportEnabled)
         {
@@ -36,6 +39,12 @@ public class VRControllerInput : MonoBehaviour
                 }
             }
         }
+
+        if (isJoystickRight)
+        {
+            
+        }
     }
+
 }
 
