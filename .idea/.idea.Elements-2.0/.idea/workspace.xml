@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c99f3493-798e-4ab3-a503-0bf7d7043aee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/TeleportWaypoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/TeleportWaypoint.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/VRControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/VRControllerInput.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +72,7 @@
       <updated>1686337402143</updated>
       <workItem from="1686337411596" duration="3424000" />
       <workItem from="1694471352083" duration="2675000" />
-      <workItem from="1694535057056" duration="13056000" />
+      <workItem from="1694535057056" duration="13505000" />
     </task>
     <servers />
   </component>
