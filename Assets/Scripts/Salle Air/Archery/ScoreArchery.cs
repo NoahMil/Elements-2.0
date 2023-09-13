@@ -10,7 +10,6 @@ public class ScoreArchery : MonoBehaviour
 {
     [SerializeField] private Epreuve AirScriptable;
     [SerializeField] private ListeTarget _listeTarget;
-    [SerializeField] private ListeWaypoint _listeWaypoint;
     public TextMeshProUGUI ScoreText;
     public int score = 0;
     
@@ -50,16 +49,5 @@ public class ScoreArchery : MonoBehaviour
             }
         }
 
-    }
-
-    private void CheckWaypoints()
-    {
-        foreach (Waypoint waypoint in _listeWaypoint.Waypoints)
-        {
-            if (waypoint.selected)
-            {
-                waypoint.GetComponent<Renderer>().material = waypoint.materialSelected;
-            }
-        }
     }
 }
