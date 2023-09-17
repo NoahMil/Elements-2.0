@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.XR;
@@ -9,48 +10,52 @@ public class VRControllerInput : MonoBehaviour
     public XRNode inputSource2;
 
     public InputHelpers.Button inputButton1;
-    public InputHelpers.Button inputButton2;
-    public InputHelpers.Button inputButton3;
+    public InputHelpers.Button inputButton21;
+    public InputHelpers.Button inputButton22;
 
-    public float InputThreshold = 0.1f;
+    private float InputThreshold = 1.0f;
     public Transform playerTransform;
     public TeleportWaypoint[] waypoints;
     private int currentIndex = 0;
-
     private bool canTeleport = false;
+    private bool canScroll = false;
 
-    
+    private void Start()
+    {
+        canScroll = true;
+    }
+
+
     void Update()
     {
-        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton1, out bool TeleportationPressed,
-            InputThreshold);
-        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton2, out bool ScrollDown,
-            InputThreshold);
-        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton3, out bool ScrollUp,
-            InputThreshold);
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton1, out bool TeleportationPressed, InputThreshold);
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton21, out bool ScrollUp, InputThreshold);
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton22, out bool ScrollDown, InputThreshold);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (TeleportationPressed && canTeleport)
         {
-            if (canTeleport)
+            waypoints[currentIndex].TeleportPlayer(playerTransform);
+            foreach (TeleportWaypoint waypoint in waypoints)
             {
-                waypoints[currentIndex].TeleportPlayer(playerTransform);
-                foreach (TeleportWaypoint waypoint in waypoints)
-                {
-                    waypoint.SetSelected(false);
-                }
+                waypoint.SetSelected(false);
             }
         }
+        
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (ScrollUp &&  canScroll)
         {
             canTeleport = true;
             ScrollWaypoints(1);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+
+        if (ScrollDown && canScroll)
         {
             canTeleport = true;
             ScrollWaypoints(-1);
         }
+        Debug.Log("TeleportationPressed: " + TeleportationPressed);
+        Debug.Log("ScrollUp: " + ScrollUp);
+        Debug.Log("ScrollDown: " + ScrollDown);
     }
 
     void ScrollWaypoints(int direction)
@@ -58,8 +63,16 @@ public class VRControllerInput : MonoBehaviour
         waypoints[currentIndex].SetSelected(false);
         currentIndex = (currentIndex + direction + waypoints.Length) % waypoints.Length;
         waypoints[currentIndex].SetSelected(true);
+        canScroll = false;
+        StartCoroutine(TeleportCooldown());
+        canScroll = true;
     }
-}
 
+    IEnumerator TeleportCooldown()
+    {
+        Debug.Log("Cooldown started");
+        yield return new WaitForSeconds(5f);
+        Debug.Log("Cooldown finished");    }
+}
 
 

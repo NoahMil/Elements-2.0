@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1425353345801233113}
   - component: {fileID: 4256165585228372883}
   - component: {fileID: 735575674003439367}
-  - component: {fileID: 1151388028279659783}
   - component: {fileID: 1151388028279659782}
+  - component: {fileID: 7672246403989985761}
   m_Layer: 0
   m_Name: Island 2
   m_TagString: Untagged
@@ -85,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1151388028279659783
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7886348505180778978}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.3280487, y: 4.762103, z: 10.634058}
-  m_Center: {x: -48.035446, y: 4.0294285, z: 21.036072}
 --- !u!114 &1151388028279659782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 7672246403989985761}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -196,3 +184,17 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!64 &7672246403989985761
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886348505180778978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: ffd38d76a36e5f043bfba8e324067403, type: 3}
