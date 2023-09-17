@@ -8,9 +8,8 @@ public class Epreuve : ScriptableObject
     public string nom;
     public bool epreuveCompleted;
     public GameObject totem;
-    public GameObject portail;
-
-    
+    public GameObject portal;
+    public GameObject destroyedportal;
 
 }
 
