@@ -385,7 +385,7 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -570,6 +570,37 @@ Transform:
   - {fileID: 1699156835972040484}
   m_Father: {fileID: 2037211307}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1362874569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1362874570}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1362874570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362874569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.465, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1699156835972040484}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1672557675
 GameObject:
@@ -1150,7 +1181,7 @@ MonoBehaviour:
   midPointVisual: {fileID: 1351592335}
   arrowPrefab: {fileID: 966039546654642096, guid: b55c84f8d5f63794197ab498dc8d636c,
     type: 3}
-  arrowSpawnPoint: {fileID: 0}
+  arrowSpawnPoint: {fileID: 2080467930356260254}
   arrowMaxSpeed: 10
   bowReleaseAudioSource: {fileID: 1674828555}
 --- !u!114 &8914569470898679757
@@ -1279,6 +1310,12 @@ PrefabInstance:
 --- !u!4 &1699156835972040484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5135515879538942007, guid: e38d6d44125d3f244a7ff7fc41240568,
+    type: 3}
+  m_PrefabInstance: {fileID: 5823605497852438291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2080467930356260254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5480551816992897677, guid: e38d6d44125d3f244a7ff7fc41240568,
     type: 3}
   m_PrefabInstance: {fileID: 5823605497852438291}
   m_PrefabAsset: {fileID: 0}

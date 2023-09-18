@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.XR;
@@ -13,18 +12,18 @@ public class VRControllerInput : MonoBehaviour
     public InputHelpers.Button inputButton21;
     public InputHelpers.Button inputButton22;
 
-    private float InputThreshold = 1.0f;
+    public float InputThreshold = 1.0f;
     public Transform playerTransform;
     public TeleportWaypoint[] waypoints;
     private int currentIndex = 0;
-    private bool canTeleport = false;
-    private bool canScroll = false;
+    private bool canTeleport = true; // Peut téléporter dès le début
+    private bool canScroll = true; // Peut faire défiler dès le début
+    private float teleportCooldown = 1.0f; // Temps de recharge entre les téléportations
+    private float scrollCooldown = 1.0f; // Temps de recharge entre les défilements
 
     private void Start()
     {
-        canScroll = true;
     }
-
 
     void Update()
     {
@@ -34,45 +33,52 @@ public class VRControllerInput : MonoBehaviour
 
         if (TeleportationPressed && canTeleport)
         {
+            StartCoroutine(TeleportCooldown());
+            canTeleport = false; // Désactive la possibilité de téléporter
+
             waypoints[currentIndex].TeleportPlayer(playerTransform);
             foreach (TeleportWaypoint waypoint in waypoints)
             {
                 waypoint.SetSelected(false);
             }
         }
-        
 
-        if (ScrollUp &&  canScroll)
+        if (ScrollUp && canScroll)
         {
-            canTeleport = true;
+            StartCoroutine(ScrollCooldown());
+            canScroll = false; // Désactive la possibilité de faire défiler
+
             ScrollWaypoints(1);
         }
 
         if (ScrollDown && canScroll)
         {
-            canTeleport = true;
+            StartCoroutine(ScrollCooldown());
+            canScroll = false; // Désactive la possibilité de faire défiler
+
             ScrollWaypoints(-1);
         }
-        Debug.Log("TeleportationPressed: " + TeleportationPressed);
-        Debug.Log("ScrollUp: " + ScrollUp);
-        Debug.Log("ScrollDown: " + ScrollDown);
     }
 
     void ScrollWaypoints(int direction)
     {
         waypoints[currentIndex].SetSelected(false);
-        currentIndex = (currentIndex + direction + waypoints.Length) % waypoints.Length;
+        currentIndex = (currentIndex + direction + waypoints.Length) % waypoints.Length;        
         waypoints[currentIndex].SetSelected(true);
-        canScroll = false;
-        StartCoroutine(TeleportCooldown());
-        canScroll = true;
+        Debug.Log("Index actuel : " + currentIndex);
     }
 
     IEnumerator TeleportCooldown()
     {
-        Debug.Log("Cooldown started");
-        yield return new WaitForSeconds(5f);
-        Debug.Log("Cooldown finished");    }
+        yield return new WaitForSeconds(teleportCooldown);
+        canTeleport = true; // Réactive la possibilité de téléporter
+    }
+
+    IEnumerator ScrollCooldown()
+    {
+        yield return new WaitForSeconds(scrollCooldown);
+        canScroll = true; // Réactive la possibilité de faire défiler
+    }
 }
 
 
