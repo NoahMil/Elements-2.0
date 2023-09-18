@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Liste Target
   m_EditorClassIdentifier: 
   Targets:
-  - {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
-  - {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
