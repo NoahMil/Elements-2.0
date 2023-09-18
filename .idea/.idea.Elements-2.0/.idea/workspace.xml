@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c99f3493-798e-4ab3-a503-0bf7d7043aee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/XR Origin Noah.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/XR Origin Noah.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/FloatingTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/FloatingTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/MovingTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/MovingTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScoreArchery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScoreArchery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScriptableObjects/Basic Target.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScriptableObjects/Basic Target.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/StickingArrowToSurface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/StickingArrowToSurface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skybox/SpaceSkies Free/Skybox_3/Purple_2K_Resolution.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skybox/SpaceSkies Free/Skybox_3/Purple_2K_Resolution.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <workItem from="1694627013086" duration="1484000" />
       <workItem from="1694896345697" duration="2002000" />
       <workItem from="1694953080184" duration="7658000" />
-      <workItem from="1695056785896" duration="7748000" />
+      <workItem from="1695056785896" duration="9016000" />
     </task>
     <servers />
   </component>
