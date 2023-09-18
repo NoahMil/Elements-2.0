@@ -15,4 +15,5 @@ MonoBehaviour:
   nom: "Tir \xE0 l'arc"
   epreuveCompleted: 1
   totem: {fileID: 0}
-  portail: {fileID: 0}
+  portal: {fileID: 0}
+  destroyedportal: {fileID: 0}

@@ -15,12 +15,12 @@ public class ScoreArchery : MonoBehaviour
     
     private void OnEnable()
     {
-        MovingTarget.OnCheckArchery += CheckArchery;
+        FloatingTarget.OnCheckArchery += CheckArchery;
 
     }
     private void OnDisable()
     {
-        MovingTarget.OnCheckArchery -= CheckArchery;
+        FloatingTarget.OnCheckArchery -= CheckArchery;
     }
 
     private void Start()
@@ -30,7 +30,7 @@ public class ScoreArchery : MonoBehaviour
 
     public void UpdateScore()
     {
-        ScoreText.text = "Cibles : " + score + "/3";
+        ScoreText.text = "Cibles : " + score + "/7";
     }
 
     private void Update()

@@ -1,47 +1,55 @@
 using UnityEngine;
 
-public class FloatingTarget : MonoBehaviour
+public class FloatingTarget : MonoBehaviour, IHittable
 {
-    public float floatAmplitude = 0.5f; // Amplitude du mouvement de lévitation
-    public float floatSpeed = 1.0f; // Vitesse de lévitation
+    private Rigidbody rb;
+    private bool stopped = false;
+    public ScoreArchery _scoreArchery;
+
+    public float floatAmplitude = 0.5f;
+    public float floatSpeed = 1.0f;
+
     [SerializeField] private Target _target;
-    
     [SerializeField] private AudioSource audioSource;
 
     private Vector3 startPosition;
-    
-    public delegate void ArcheryEvents();
 
     public static event ArcheryEvents OnCheckArchery;
+    public delegate void ArcheryEvents();
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         startPosition = transform.position;
     }
 
     void Update()
     {
-        float floatOffset = Mathf.Sin(Time.time * floatSpeed) * floatAmplitude;
-        transform.position = startPosition + Vector3.up * floatOffset;
-        
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!stopped)
         {
-            GetHit();
+            float floatOffset = Mathf.Sin(Time.time * floatSpeed) * floatAmplitude;
+            transform.position = startPosition + Vector3.up * floatOffset;
         }
     }
-    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if ((rb.isKinematic || collision.gameObject.CompareTag("Arrow")) == false)
+        {
+            audioSource.Play();
+        }
+    }
+
     public void GetHit()
     {
         _target.hp--;
-        if(_target.hp <= 0)
+        if (_target.hp <= 0)
         {
+            Destroy(gameObject);
+            stopped = true;
+            _scoreArchery.score++;
             _target.targetCompleted = true;
             OnCheckArchery?.Invoke();
         }
     }
-    
-}
-public interface IHittable
-{
-    void GetHit();
 }

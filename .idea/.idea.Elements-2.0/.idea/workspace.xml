@@ -3,21 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c99f3493-798e-4ab3-a503-0bf7d7043aee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bow_Evil OP Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Bow_Evil OP Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Bomb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 7.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock 8.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Rock3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Prefabs/XR Origin Pieces/Teleport Interactor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Prefabs/XR Origin Pieces/Teleport Interactor.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/FloatingTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/FloatingTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/MovingTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/MovingTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScoreArchery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScoreArchery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScriptableObjects/Basic Target.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScriptableObjects/Basic Target.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/StickingArrowToSurface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/StickingArrowToSurface.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +85,7 @@
       <workItem from="1694627013086" duration="1484000" />
       <workItem from="1694896345697" duration="2002000" />
       <workItem from="1694953080184" duration="7658000" />
-      <workItem from="1695056785896" duration="2649000" />
+      <workItem from="1695056785896" duration="7748000" />
     </task>
     <servers />
   </component>

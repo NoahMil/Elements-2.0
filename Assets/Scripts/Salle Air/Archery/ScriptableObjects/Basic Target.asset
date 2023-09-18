@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Basic Target
   m_EditorClassIdentifier: 
   gameObject: {fileID: 0}
-  hp: 2
+  hp: -1
   targetCompleted: 1
