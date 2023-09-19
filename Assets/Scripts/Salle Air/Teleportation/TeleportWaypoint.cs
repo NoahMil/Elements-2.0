@@ -11,6 +11,7 @@ public class TeleportWaypoint : MonoBehaviour
     public Vector3 prefabRotation; // Rotation à appliquer au préfab
     public GameObject spawnPositionPlayer;
     private GameObject spawnedPrefab; // Référence à l'objet instancié
+    public AudioSource teleportSE;
 
     void Start()
     {
@@ -25,13 +26,11 @@ public class TeleportWaypoint : MonoBehaviour
 
         if(selected && objectPrefab != null)
         {
-            // Instancie l'objet avec la rotation et la hauteur spécifiées
             Vector3 spawnPosition = transform.position + Vector3.up * prefabHeight;
             spawnedPrefab = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(prefabRotation));
         }
         else
         {
-            // Désélection, détruit l'objet instancié s'il existe
             if(spawnedPrefab != null)
             {
                 Destroy(spawnedPrefab);
@@ -41,6 +40,7 @@ public class TeleportWaypoint : MonoBehaviour
 
     public void TeleportPlayer(Transform playerTransform)
     {
+        teleportSE.Play();
         playerTransform.position = spawnPositionPlayer.transform.position;
         playerTransform.rotation = spawnPositionPlayer.transform.rotation;
     }

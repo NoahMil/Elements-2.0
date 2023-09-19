@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a954e648ce53544298e93ba925018e0, type: 3}
-  m_Name: Epreuve Terre
+  m_Script: {fileID: 11500000, guid: 775073e191c43a342879b287145e09da, type: 3}
+  m_Name: Target 6
   m_EditorClassIdentifier: 
-  nom: Fruit Ninja
-  epreuveCompleted: 1
-  totem: {fileID: 0}
-  portal: {fileID: 0}
-  destroyedportal: {fileID: 0}
+  hpMax: 2
+  HP: 2
+  speed: 0.5
+  amplitude: 1
+  targetCompleted: 1

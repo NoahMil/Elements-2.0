@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Epreuve Eau
   m_EditorClassIdentifier: 
   nom: "Chasse au tr\xE9sor"
-  epreuveCompleted: 0
+  epreuveCompleted: 1
   totem: {fileID: 0}
-  portail: {fileID: 0}
+  portal: {fileID: 0}
+  destroyedportal: {fileID: 0}

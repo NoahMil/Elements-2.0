@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrow
+  - FxTemporaire
+  - Meteor
+  - Floor
+  - Void
   layers:
   - Default
   - TransparentFX

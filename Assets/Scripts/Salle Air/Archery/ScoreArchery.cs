@@ -10,7 +10,9 @@ public class ScoreArchery : MonoBehaviour
 {
     [SerializeField] private Epreuve AirScriptable;
     [SerializeField] private ListeTarget _listeTarget;
+    [SerializeField] private GameObject startMenu;
     public TextMeshProUGUI ScoreText;
+    public GameObject totemReward;
     public int score = 0;
     
     private void OnEnable()
@@ -44,7 +46,9 @@ public class ScoreArchery : MonoBehaviour
         {
             if (target.targetCompleted)
             {
-                AirScriptable.epreuveCompleted = true;
+                AirScriptable.epreuveCompleted = true; 
+                totemReward.SetActive(true);
+                startMenu.SetActive(false);
                 Debug.Log("Complete");
             }
         }

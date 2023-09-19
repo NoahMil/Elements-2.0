@@ -6,6 +6,7 @@ public class FloatingTarget : MonoBehaviour, IHittable
     private bool stopped = false;
     public ScoreArchery _scoreArchery;
     public ParticleSystem explosionPrefab;
+    [SerializeField] public AudioSource explosionSE;
     
     [SerializeField] private Target _target;
     [SerializeField] private AudioSource audioSource;
@@ -20,6 +21,7 @@ public class FloatingTarget : MonoBehaviour, IHittable
         rb = GetComponent<Rigidbody>();
         startPosition = transform.position;
         _target.HP = _target.hpMax;
+        _target.targetCompleted = false;
     }
 
     void Update()
@@ -44,13 +46,15 @@ public class FloatingTarget : MonoBehaviour, IHittable
         _target.HP--;
         if (_target.HP <= 0)
         {
-            Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(explosionSE.clip, transform.position);
             Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity); 
             stopped = true;
             _scoreArchery.score++;
             _target.targetCompleted = true;
             OnCheckArchery?.Invoke();
+            Destroy(gameObject);
         }
+
     }
 }
 

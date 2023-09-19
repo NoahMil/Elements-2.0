@@ -12,6 +12,8 @@ public class StickingArrowToSurface : MonoBehaviour
 
     [SerializeField] private GameObject stickingArrow;
 
+    private float destroyDelay = 2f;
+    
     private void OnCollisionEnter(Collision collision)
     {
         rb.isKinematic = true;
@@ -26,6 +28,6 @@ public class StickingArrowToSurface : MonoBehaviour
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
         }
         collision.collider.GetComponent<IHittable>()?.GetHit();
-        Destroy(gameObject);
     }
+    
 }

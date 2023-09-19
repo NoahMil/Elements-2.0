@@ -26,6 +26,10 @@ public class BowStringController : MonoBehaviour
 
     public UnityEvent OnBowPulled;
     public UnityEvent<float> OnBowReleased;
+    
+    private bool onFloor = false;
+    private float onFloorDelay = 0f;
+
 
     private void Awake()
     {
@@ -76,6 +80,16 @@ public class BowStringController : MonoBehaviour
             HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
 
             bowStringRenderer.CreateString(midPointVisualObject.position);
+        }
+        
+        if (onFloor)
+        {
+            onFloorDelay += Time.deltaTime;
+
+            if (onFloorDelay >= 10f)
+            {
+                Destroy(gameObject);
+            }
         }
     }
     
@@ -140,6 +154,28 @@ public class BowStringController : MonoBehaviour
             audioSource.Stop();
             strength = 0;
             midPointVisualObject.localPosition = Vector3.zero;
+        }
+    }
+    
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            onFloor = true;
+        }
+        
+        if (collision.gameObject.CompareTag("Void"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            onFloor = false;
+            onFloorDelay = 0f;
         }
     }
 
