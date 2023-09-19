@@ -15,13 +15,6 @@ public class UIText : MonoBehaviour
 
     private void Start()
     {
-        textOptions = new string[]
-        {
-            "Bienvenue Aventurier !",
-            "Pour cette épreuve, tu devras abattre toutes les cibles présentes dans cette salle",
-            "Saisis l'arc en face de toi et l'épreuve commencera! Bonne chance!"
-        };
-
         textComponent = GetComponent<TextMeshProUGUI>();
         textComponent.text = textOptions[currentIndex];
     }
@@ -38,5 +31,3 @@ public class UIText : MonoBehaviour
         }
     }
 }
-
-

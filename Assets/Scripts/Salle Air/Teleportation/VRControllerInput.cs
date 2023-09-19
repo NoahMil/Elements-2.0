@@ -65,7 +65,6 @@ public class VRControllerInput : MonoBehaviour
         waypoints[currentIndex].SetSelected(false);
         currentIndex = (currentIndex + direction + waypoints.Length) % waypoints.Length;        
         waypoints[currentIndex].SetSelected(true);
-        Debug.Log("Index actuel : " + currentIndex);
     }
 
     IEnumerator TeleportCooldown()

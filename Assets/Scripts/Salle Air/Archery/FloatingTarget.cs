@@ -5,10 +5,7 @@ public class FloatingTarget : MonoBehaviour, IHittable
     private Rigidbody rb;
     private bool stopped = false;
     public ScoreArchery _scoreArchery;
-
-    public float floatAmplitude = 0.5f;
-    public float floatSpeed = 1.0f;
-
+    
     [SerializeField] private Target _target;
     [SerializeField] private AudioSource audioSource;
 
@@ -21,13 +18,14 @@ public class FloatingTarget : MonoBehaviour, IHittable
     {
         rb = GetComponent<Rigidbody>();
         startPosition = transform.position;
+        _target.HP = _target.hpMax;
     }
 
     void Update()
     {
         if (!stopped)
         {
-            float floatOffset = Mathf.Sin(Time.time * floatSpeed) * floatAmplitude;
+            float floatOffset = Mathf.Sin(Time.time * _target.speed) * _target.amplitude;
             transform.position = startPosition + Vector3.up * floatOffset;
         }
     }
@@ -42,8 +40,8 @@ public class FloatingTarget : MonoBehaviour, IHittable
 
     public void GetHit()
     {
-        _target.hp--;
-        if (_target.hp <= 0)
+        _target.HP--;
+        if (_target.HP <= 0)
         {
             Destroy(gameObject);
             stopped = true;
@@ -52,4 +50,9 @@ public class FloatingTarget : MonoBehaviour, IHittable
             OnCheckArchery?.Invoke();
         }
     }
+}
+
+public interface IHittable
+{
+    void GetHit();
 }

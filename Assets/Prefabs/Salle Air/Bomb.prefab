@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4862589087296571543}
   - component: {fileID: 6085957725567896331}
   - component: {fileID: 6145242058566901022}
+  - component: {fileID: 3628343374811840436}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -64,6 +65,8 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: bd3be5040dead7c42a5e0d5fd308b9d4, type: 2}
+  - {fileID: 2100000, guid: 52c7ff46fa5cf96489725b969ff6821f, type: 2}
+  - {fileID: 2100000, guid: 52c7ff46fa5cf96489725b969ff6821f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,8 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8cd770c1dca96459f58e11fd8262c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatAmplitude: 0.5
-  floatSpeed: 1
+  _scoreArchery: {fileID: 0}
+  _target: {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
+  audioSource: {fileID: 0}
 --- !u!54 &6145242058566901022
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -115,3 +119,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &3628343374811840436
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375865014610258242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8024611349946882221, guid: adea4e6e8d8505c49a88570ef6b10e4d, type: 3}

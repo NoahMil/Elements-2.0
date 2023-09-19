@@ -7,40 +7,39 @@ public class GestionnaireEpreuve : MonoBehaviour
     [SerializeField] private ListeTarget _listeTarget;
     public GameObject arc;
     public GameObject[] cibles; 
-    public float delaiAvantApparition = 2f; 
+    public float delaiAvantApparition = 2f;
 
-    private bool epreuveDemarree = false;
-
-    private void Start()
-    {
-        foreach (Target target in _listeTarget.Targets)
-        {
-            target.gameObject.SetActive(false);
-        }
-    }
-
-    private void Update()
-    {
-        if (!epreuveDemarree && arcEstSaisi())
-        {
-            epreuveDemarree = true;
-            StartCoroutine(LancerEpreuve());
-        }
-    }
-
-    private bool arcEstSaisi()
-    {
-        return false; 
-    }
-
-    private IEnumerator LancerEpreuve()
-    {
-        yield return new WaitForSeconds(delaiAvantApparition);
-
-        foreach (Target target in _listeTarget.Targets)
-        {
-            target.gameObject.SetActive(true);        }
-    }
+    
+    // private void Start()
+    // {
+    //     foreach (Target target in _listeTarget.Targets)
+    //     {
+    //         target.gameObject.SetActive(false);
+    //     }
+    // }
+    //
+    // private void Update()
+    // {
+    //     if (!epreuveDemarree && arcEstSaisi())
+    //     {
+    //         epreuveDemarree = true;
+    //         StartCoroutine(LancerEpreuve());
+    //     }
+    // }
+    //
+    // private bool arcEstSaisi()
+    // {
+    //     return false; 
+    // }
+    //
+    // private IEnumerator LancerEpreuve()
+    // {
+    //     yield return new WaitForSeconds(delaiAvantApparition);
+    //
+    //     foreach (Target target in _listeTarget.Targets)
+    //     {
+    //         target.gameObject.SetActive(true);        }
+    // }
 }
 
 

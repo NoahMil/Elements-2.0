@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Targets:
   - {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d288f25b38e74fe46aea8fc969a01674, type: 2}
+  - {fileID: 11400000, guid: 09c0c3b80546e954a9e2d8940ec7a7cb, type: 2}
+  - {fileID: 11400000, guid: 5f9ac585cffb1c7419bedbb3843b48e3, type: 2}
+  - {fileID: 11400000, guid: 8287011f623375f42b65edcf5975d211, type: 2}
+  - {fileID: 11400000, guid: 1c12be50e215ea446bb35a172de74439, type: 2}
+  - {fileID: 11400000, guid: 4142910dafb5e0344b89665eb1c20cbf, type: 2}
