@@ -5,6 +5,7 @@ public class FloatingTarget : MonoBehaviour, IHittable
     private Rigidbody rb;
     private bool stopped = false;
     public ScoreArchery _scoreArchery;
+    public ParticleSystem explosionPrefab;
     
     [SerializeField] private Target _target;
     [SerializeField] private AudioSource audioSource;
@@ -44,6 +45,7 @@ public class FloatingTarget : MonoBehaviour, IHittable
         if (_target.HP <= 0)
         {
             Destroy(gameObject);
+            Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity); 
             stopped = true;
             _scoreArchery.score++;
             _target.targetCompleted = true;

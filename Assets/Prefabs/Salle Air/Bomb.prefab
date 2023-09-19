@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreArchery: {fileID: 0}
+  explosionPrefab: {fileID: 19800008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}
   _target: {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
   audioSource: {fileID: 0}
 --- !u!54 &6145242058566901022
