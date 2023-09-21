@@ -12,7 +12,6 @@ public class StickingArrowToSurface : MonoBehaviour
 
     [SerializeField] private GameObject stickingArrow;
 
-    private float destroyDelay = 2f;
     
     private void OnCollisionEnter(Collision collision)
     {
