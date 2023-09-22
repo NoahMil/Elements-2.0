@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f05a9b45e89f5240bca7386d6bbed43, type: 3}
   m_Name: Island 1
   m_EditorClassIdentifier: 
-  targets: []
+  targets:
+  - {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
   islandCompleted: 0
