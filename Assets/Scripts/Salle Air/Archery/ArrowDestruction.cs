@@ -7,6 +7,11 @@ public class ArrowDestruction : MonoBehaviour
     private float delayDestruction = 5f;
     void Start()
     {
-        Destroy(gameObject, delayDestruction);
+        Collider collider = GetComponent<Collider>();
+        if (collider !=null)
+        {
+            collider.isTrigger = false;
+        }
+        Destroy(transform.parent.gameObject, delayDestruction);
     }
 }
