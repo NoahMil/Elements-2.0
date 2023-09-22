@@ -14518,6 +14518,11 @@ PrefabInstance:
       propertyPath: totemReward
       value: 
       objectReference: {fileID: 726042563}
+    - target: {fileID: 3782898056298568482, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
+        type: 3}
+      propertyPath: islandsArray.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8736503700985905753, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
         type: 3}
       propertyPath: m_Name
@@ -14545,7 +14550,7 @@ PrefabInstance:
     - target: {fileID: 3683148897780435272, guid: 631dc8275ed1a1e4a8d51f43c9a228ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.17
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: 3683148897780435272, guid: 631dc8275ed1a1e4a8d51f43c9a228ca,
         type: 3}

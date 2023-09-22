@@ -9,17 +9,19 @@ using UnityEngine;
 public class ScoreArchery : MonoBehaviour
 {
     [SerializeField] private Epreuve AirScriptable;
-    [SerializeField] private ListeTarget _listeTarget;
+    [SerializeField] private Island[] _islandsArray;
+
     [SerializeField] private GameObject startMenu;
     public TextMeshProUGUI ScoreText;
     public GameObject totemReward;
     public int score = 0;
-    
+
     private void OnEnable()
     {
         FloatingTarget.OnCheckArchery += CheckArchery;
 
     }
+
     private void OnDisable()
     {
         FloatingTarget.OnCheckArchery -= CheckArchery;
@@ -42,16 +44,22 @@ public class ScoreArchery : MonoBehaviour
 
     private void CheckArchery()
     {
-        foreach (Target target in _listeTarget.Targets)
+        foreach (Island island in _islandsArray)
         {
-            if (target.targetCompleted)
+            if (island.islandCompleted)
             {
-                AirScriptable.epreuveCompleted = true; 
-                totemReward.SetActive(true);
-                startMenu.SetActive(false);
-                Debug.Log("Complete");
+                score++;
+            }
+            foreach (Target target in island.targets)
+            {
+                if (target.targetDestroyed)
+                {
+                    AirScriptable.epreuveCompleted = true;
+                    totemReward.SetActive(true);
+                    startMenu.SetActive(false);
+                    Debug.Log("Complete");
+                }
             }
         }
-
     }
 }

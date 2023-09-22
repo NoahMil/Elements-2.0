@@ -21,7 +21,7 @@ public class FloatingTarget : MonoBehaviour, IHittable
         rb = GetComponent<Rigidbody>();
         startPosition = transform.position;
         _target.HP = _target.hpMax;
-        _target.targetCompleted = false;
+        _target.targetDestroyed = false;
     }
 
     void Update()
@@ -49,15 +49,13 @@ public class FloatingTarget : MonoBehaviour, IHittable
             AudioSource.PlayClipAtPoint(explosionSE.clip, transform.position);
             Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity); 
             stopped = true;
-            _scoreArchery.score++;
-            _target.targetCompleted = true;
+            _target.targetDestroyed = true;
             OnCheckArchery?.Invoke();
             Destroy(gameObject);
         }
 
     }
 }
-
 public interface IHittable
 {
     void GetHit();

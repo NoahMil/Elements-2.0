@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GestionnaireEpreuve : MonoBehaviour
 {
-    [SerializeField] private ListeTarget _listeTarget;
     public GameObject arc;
     public GameObject[] cibles; 
     public float delaiAvantApparition = 2f;
