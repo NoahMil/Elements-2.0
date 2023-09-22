@@ -272,7 +272,7 @@ MonoBehaviour:
   midPointGrabObject: {fileID: 3939079720775047529}
   midPointVisualObject: {fileID: 3939079720263241127}
   midPointParent: {fileID: 3939079719889120396}
-  bowStringStretchLimit: 0.3
+  bowStringStretchLimit: 0.5
   stringSoundThreshold: 0.001
   audioSource: {fileID: 3939079721272541401}
   OnBowPulled:
