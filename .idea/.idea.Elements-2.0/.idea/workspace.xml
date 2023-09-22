@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c99f3493-798e-4ab3-a503-0bf7d7043aee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshs/Arrow04.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshs/Arrow04.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshs/Bow24-TEST.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshs/Bow24-TEST.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Arrow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ArrowParent.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ArrowParent.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/StickingArrow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/StickingArrow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/XR Origin Noah.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/XR Origin Noah.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ArrowDestruction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ArrowDestruction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/StickingArrowToSurface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/StickingArrowToSurface.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="c99f3493-798e-4ab3-a503-0bf7d7043aee" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +83,7 @@
       <workItem from="1695125927216" duration="15644000" />
       <workItem from="1695288346784" duration="8091000" />
       <workItem from="1695317425663" duration="1483000" />
+      <workItem from="1695380767939" duration="1777000" />
     </task>
     <servers />
   </component>

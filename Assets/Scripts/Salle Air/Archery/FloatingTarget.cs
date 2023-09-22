@@ -26,11 +26,11 @@ public class FloatingTarget : MonoBehaviour, IHittable
 
     void Update()
     {
-        if (!stopped)
+        /*if (!stopped)
         {
             float floatOffset = Mathf.Sin(Time.time * _target.speed) * _target.amplitude;
             transform.position = startPosition + Vector3.up * floatOffset;
-        }
+        }*/
     }
 
     private void OnCollisionEnter(Collision collision)
