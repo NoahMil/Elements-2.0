@@ -196,12 +196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8cd770c1dca96459f58e11fd8262c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreArchery: {fileID: 0}
+  _target: {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
   explosionPrefab: {fileID: 19800014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
   explosionSE: {fileID: 1906340234260631828, guid: b7ed6fd03e3d23f45913eb88cd653d22,
     type: 3}
-  _target: {fileID: 11400000, guid: 3ccd451a0b9ad0c4c95d1e1abc9ee32e, type: 2}
-  audioSource: {fileID: 0}
+  redLightMaterial: {fileID: 2100000, guid: 5cd3943eb0442b94eb2d741cd7003878, type: 2}
 --- !u!54 &5375221351419572482
 Rigidbody:
   m_ObjectHideFlags: 0

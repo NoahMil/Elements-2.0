@@ -9,12 +9,15 @@ using UnityEngine;
 public class ScoreArchery : MonoBehaviour
 {
     [SerializeField] private Epreuve AirScriptable;
-    [SerializeField] private Island[] _islandsArray;
+    [SerializeField] private List<Island> _islandsList;
 
     [SerializeField] private GameObject startMenu;
     public TextMeshProUGUI ScoreText;
     public GameObject totemReward;
     public int score = 0;
+    
+    private int checkArcheryCallCount = 0; // Variable pour compter les appels de CheckArchery
+
 
     private void OnEnable()
     {
@@ -34,7 +37,7 @@ public class ScoreArchery : MonoBehaviour
 
     public void UpdateScore()
     {
-        ScoreText.text = "Cibles : " + score + "/7";
+        ScoreText.text = "Ile completée : " + score + "/7";
     }
 
     private void Update()
@@ -42,24 +45,43 @@ public class ScoreArchery : MonoBehaviour
         UpdateScore();
     }
 
+    public bool AreAllIslandsComplete()
+    {
+        foreach (Island island in _islandsList)
+        {
+            if (!island.islandComplete)
+            {
+                return false;
+            }
+        }
+        return true;
+
+    }
+
     private void CheckArchery()
     {
-        foreach (Island island in _islandsArray)
+        foreach (Island island in _islandsList)
         {
-            if (island.islandCompleted)
-            {
-                score++;
-            }
             foreach (Target target in island.targets)
             {
                 if (target.targetDestroyed)
                 {
-                    AirScriptable.epreuveCompleted = true;
-                    totemReward.SetActive(true);
-                    startMenu.SetActive(false);
-                    Debug.Log("Complete");
+                    if (island.AreAllTargetsDestroyed() && !island.islandComplete)
+                    {
+                        island.islandComplete = true;
+                        score++;
+                    }
+                    
+                    if (AreAllIslandsComplete())
+                    {
+                        AirScriptable.epreuveCompleted = true;
+                        totemReward.SetActive(true);
+                        startMenu.SetActive(false);
+                    }
                 }
             }
         }
     }
 }
+    
+    

@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a954e648ce53544298e93ba925018e0, type: 3}
-  m_Name: Epreuve Air
+  m_Script: {fileID: 11500000, guid: 775073e191c43a342879b287145e09da, type: 3}
+  m_Name: Target 7.2
   m_EditorClassIdentifier: 
-  nom: "Tir \xE0 l'arc"
-  epreuveCompleted: 0
-  totem: {fileID: 1280227573971359952, guid: 2539be1e1df46a246b862738f8353843, type: 3}
-  portal: {fileID: 0}
-  destroyedportal: {fileID: 0}
+  hpMax: 2
+  hp: 0
+  targetDestroyed: 0
