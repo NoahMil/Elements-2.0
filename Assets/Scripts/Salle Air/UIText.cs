@@ -30,9 +30,12 @@ public class UIText : MonoBehaviour
             textComponent.text = textOptions[currentIndex];
             timer = 0f;
         }
-
-        Vector3 playerPosition = player.position;
-        Vector3 lookAtPosition = new Vector3(playerPosition.x, transform.position.y + 180f, playerPosition.z);
-        transform.LookAt(lookAtPosition);
+        
+        Vector3 direction = player.position - transform.position;
+        direction.y = 0; 
+        
+        Quaternion newRotation = Quaternion.LookRotation(direction);
+        
+        transform.rotation = newRotation;
     }
 }
