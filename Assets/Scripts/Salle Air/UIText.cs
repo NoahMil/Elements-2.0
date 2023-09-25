@@ -8,7 +8,8 @@ public class UIText : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] textOptions;
-    public float changeInterval; 
+    public float changeInterval;
+    [SerializeField] private Transform player;
 
     private int currentIndex = 0;
     private float timer = 0f;
@@ -29,5 +30,9 @@ public class UIText : MonoBehaviour
             textComponent.text = textOptions[currentIndex];
             timer = 0f;
         }
+
+        Vector3 playerPosition = player.position;
+        Vector3 lookAtPosition = new Vector3(playerPosition.x, transform.position.y + 180f, playerPosition.z);
+        transform.LookAt(lookAtPosition);
     }
 }

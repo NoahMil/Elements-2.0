@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class StickingArrowToSurface : MonoBehaviour
 {
@@ -23,9 +24,11 @@ public class StickingArrowToSurface : MonoBehaviour
         if (initialArrow != null)
         {
             MeshRenderer renderer = initialArrow.GetComponent<MeshRenderer>();
+            VisualEffect visualEffect = initialArrow.GetComponent<VisualEffect>();
             if (renderer != null)
             {
                 renderer.enabled = false;
+                visualEffect.enabled = false;
             }
         }
 
