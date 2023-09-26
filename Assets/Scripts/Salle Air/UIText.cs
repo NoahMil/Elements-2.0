@@ -34,7 +34,7 @@ public class UIText : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         direction.y = 0; 
         
-        Quaternion newRotation = Quaternion.LookRotation(direction);
+        Quaternion newRotation = Quaternion.LookRotation(-direction);
         
         transform.rotation = newRotation;
     }
