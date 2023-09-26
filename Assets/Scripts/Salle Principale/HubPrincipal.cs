@@ -18,6 +18,8 @@ public class HubPrincipal : MonoBehaviour
             if (epreuves.epreuveCompleted)
             {
                 epreuves.totem.SetActive(true);
+                epreuves.destroyedportal.SetActive(true);
+                epreuves.portal.SetActive(false);
             }
         }
     }
