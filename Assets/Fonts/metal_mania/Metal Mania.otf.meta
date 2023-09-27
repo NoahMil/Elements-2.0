@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 173e7dc1f76e9e942b6b0f15f87a744b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Metal Mania
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 502c2fb49852268449e111bd67201f20, type: 3}
+  - {fileID: 12800000, guid: 342292bb7972e8e4ba3b2e33d725aadd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

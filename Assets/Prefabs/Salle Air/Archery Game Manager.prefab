@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8736503700985905753
+--- !u!1 &1839870376160620113
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3782898056298568476}
-  - component: {fileID: 3782898056298568482}
-  - component: {fileID: 3710486792779899637}
+  - component: {fileID: 1839870376326598018}
+  - component: {fileID: 1839870376326598072}
+  - component: {fileID: 1839870376326598079}
+  - component: {fileID: 1839870376326598078}
   m_Layer: 0
   m_Name: Archery Game Manager
   m_TagString: Untagged
@@ -18,14 +19,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3782898056298568476
+--- !u!4 &1839870376326598018
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8736503700985905753}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1839870376160620113}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -33,30 +34,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3782898056298568482
+--- !u!114 &1839870376326598072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8736503700985905753}
+  m_GameObject: {fileID: 1839870376160620113}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 513783208ecfcf946a56dfe522fbc18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AirScriptable: {fileID: 11400000, guid: 66908cd13a2b6934196c3cc0bec48108, type: 2}
-  _islandsArray: []
+  _islandsList:
+  - {fileID: 11400000, guid: 5cfdace38f71ce34e8ba4afad86d5264, type: 2}
+  - {fileID: 11400000, guid: 614afb8fe1d3e824b8c46bd6a44f218d, type: 2}
+  - {fileID: 11400000, guid: bdab9be6cb3aec840a87e183084ac578, type: 2}
+  - {fileID: 11400000, guid: 76161f8efe0ff124b847c880167366c3, type: 2}
+  - {fileID: 11400000, guid: 070c267dfe3cb2c4f8ff711833b18f93, type: 2}
+  - {fileID: 11400000, guid: e30a0be91acb2644baf110a9ab2cdd77, type: 2}
+  - {fileID: 11400000, guid: 945c95c6b33021b4aad9d6fb4aa4105e, type: 2}
   startMenu: {fileID: 0}
   ScoreText: {fileID: 0}
   totemReward: {fileID: 0}
---- !u!114 &3710486792779899637
+  score: 0
+--- !u!114 &1839870376326598079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8736503700985905753}
+  m_GameObject: {fileID: 1839870376160620113}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0388c38890e50a343aa91ba400fb387a, type: 3}
@@ -64,9 +73,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputSource1: 5
   inputSource2: 4
-  inputButton1: 6
+  inputButton11: 6
+  inputButton12: 0
   inputButton21: 8
   inputButton22: 6
+  inputButton23: 3
   InputThreshold: 1
   playerTransform: {fileID: 0}
   waypoints:
@@ -77,3 +88,100 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  isLeftHanded: 0
+--- !u!82 &1839870376326598078
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839870376160620113}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4040c81dc212ca4439fb6a18d49bd03d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

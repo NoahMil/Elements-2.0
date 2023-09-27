@@ -179,4 +179,9 @@ public class BowStringController : MonoBehaviour
         }
     }
 
+    void HandDetection()
+    {
+        
+    }
+
 }

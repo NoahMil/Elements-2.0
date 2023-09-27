@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ArrowController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject midPointVisual, arrowPrefab, arrowSpawnPoint;
+    [SerializeField] private GameObject midPointVisual, arrowPrefab,arrowSpawnPoint, leftarrowSpawnPoint;
+
+    public VRControllerInput _vrControllerInput;
 
     [SerializeField]
     private float arrowMaxSpeed = 10;
@@ -23,11 +24,24 @@ public class ArrowController : MonoBehaviour
         bowReleaseAudioSource.Play();
         midPointVisual.SetActive(false);
 
-        GameObject arrow = Instantiate(arrowPrefab);
-        arrow.transform.position = arrowSpawnPoint.transform.position;
-        arrow.transform.rotation = midPointVisual.transform.rotation;
-        Rigidbody rb = arrow.GetComponent<Rigidbody>();
-        rb.AddForce(midPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);
+        if (_vrControllerInput.isLeftHanded == true)
+        {
+            GameObject arrow = Instantiate(arrowPrefab);
+            arrow.transform.position = leftarrowSpawnPoint.transform.position;
+            arrow.transform.rotation = midPointVisual.transform.rotation;
+            Rigidbody rb = arrow.GetComponent<Rigidbody>();
+            rb.AddForce(midPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);
+
+        }
         
+        else
+        {
+            GameObject arrow = Instantiate(arrowPrefab);
+            arrow.transform.position = arrowSpawnPoint.transform.position;
+            arrow.transform.rotation = midPointVisual.transform.rotation;
+            Rigidbody rb = arrow.GetComponent<Rigidbody>();
+            rb.AddForce(midPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);   
+        }
+
     }
 }
