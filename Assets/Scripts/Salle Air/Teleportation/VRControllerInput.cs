@@ -25,6 +25,8 @@ public class VRControllerInput : MonoBehaviour
     private float teleportCooldown = 1.0f; // Temps de recharge entre les téléportations
     private float scrollCooldown = 1.0f; // Temps de recharge entre les défilements
     public bool isLeftHanded;
+    public bool isRightHanded;
+
     
     void Update()
     {
@@ -32,13 +34,7 @@ public class VRControllerInput : MonoBehaviour
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton21, out bool ScrollUp, InputThreshold);
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton22, out bool ScrollDown, InputThreshold);
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton12, out bool RightHand, InputThreshold);
-        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton23, out bool LeftHand, InputThreshold);
 
-        if (LeftHand)
-        {
-            isLeftHanded = true;
-            Debug.Log("LEFT HAND");
-        }
         
         if (TeleportationPressed && canTeleport)
         {

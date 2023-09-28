@@ -12,7 +12,7 @@ public class BowStringController : MonoBehaviour
 
     private XRGrabInteractable interactable;
 
-    [SerializeField] private Transform midPointGrabObject, midPointVisualObject, midPointParent;
+    [SerializeField] private Transform midPointGrabObject, midPointVisualObject, leftmidPointVisualObject, midPointParent;
 
     [SerializeField] private float bowStringStretchLimit = 0.3f;
 
@@ -29,6 +29,8 @@ public class BowStringController : MonoBehaviour
     
     private bool onFloor = false;
     private float onFloorDelay = 0f;
+
+    public ArrowController _arrowcontroller;
 
 
     private void Awake()
@@ -53,6 +55,7 @@ public class BowStringController : MonoBehaviour
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
+        leftmidPointVisualObject.localPosition = Vector3.zero;
         bowStringRenderer.CreateString(null);
 
     }
@@ -80,6 +83,8 @@ public class BowStringController : MonoBehaviour
             HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
 
             bowStringRenderer.CreateString(midPointVisualObject.position);
+            bowStringRenderer.CreateString(leftmidPointVisualObject.position);
+
         }
         
         if (onFloor)
@@ -104,6 +109,7 @@ public class BowStringController : MonoBehaviour
             }
             strength = Remap(midPointLocalZAbs, 0, bowStringStretchLimit, 0, 1);
             midPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
+            leftmidPointVisualObject.localPosition = new Vector3(0, 0, midPointLocalSpace.z);
 
             PlayStringPullingSound();
         }
@@ -143,6 +149,7 @@ public class BowStringController : MonoBehaviour
             audioSource.Pause();
             strength = 1;
             midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStretchLimit);
+            leftmidPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStretchLimit);
         }
     }
 
@@ -154,6 +161,7 @@ public class BowStringController : MonoBehaviour
             audioSource.Stop();
             strength = 0;
             midPointVisualObject.localPosition = Vector3.zero;
+            leftmidPointVisualObject.localPosition = Vector3.zero;
         }
     }
     
@@ -178,10 +186,4 @@ public class BowStringController : MonoBehaviour
             onFloorDelay = 0f;
         }
     }
-
-    void HandDetection()
-    {
-        
-    }
-
 }
