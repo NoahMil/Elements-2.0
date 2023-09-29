@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1797484782254038566}
   - component: {fileID: 410808246771522140}
   - component: {fileID: 1508580733711364026}
+  - component: {fileID: 4411467209553735433}
   m_Layer: 6
   m_Name: 'VFXArrowParent '
   m_TagString: Arrow
@@ -82,6 +83,18 @@ MonoBehaviour:
     type: 3}
   initialArrow: {fileID: 9091432655520335232, guid: cd1c6042468425847bdf38117f23dbb4,
     type: 3}
+--- !u!114 &4411467209553735433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165076264327400943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4844a70403d6b045bc4688c8cd16269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2155748322873886798
 PrefabInstance:
   m_ObjectHideFlags: 0

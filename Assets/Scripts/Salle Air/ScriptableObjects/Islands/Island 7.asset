@@ -21,9 +21,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f5bc462a691c204b8b4d7b0729d810e, type: 2}
   - {fileID: 11400000, guid: 652ef5e0df6d8494ab1c05ff8a04ea6d, type: 2}
   - {fileID: 11400000, guid: b2ddb022c49870b4d8b0f735b5ec816b, type: 2}
-  - {fileID: 11400000, guid: 2d9c7b3e746a43c45863584a693072e4, type: 2}
   - {fileID: 11400000, guid: f9609ea1a76b49742a35a0f4c53096fb, type: 2}
   - {fileID: 11400000, guid: 69318689533ed384dad67fceb0491751, type: 2}
-  - {fileID: 11400000, guid: ae6e19e2a083e9e428a17ef83246d28a, type: 2}
   - {fileID: 11400000, guid: ac2578346e3c60046b2ad4ef0d242f11, type: 2}
   islandComplete: 0

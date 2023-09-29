@@ -1,33 +1,104 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+
+
 
 public class ArrowController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject midPointVisual, arrowPrefab, arrowSpawnPoint;
+    [SerializeField] private GameObject rightmidPointVisual,
+        leftmidPointVisual,
+        arrowPrefab,
+        rightarrowSpawnPoint,
+        leftarrowSpawnPoint;
 
-    [SerializeField]
-    private float arrowMaxSpeed = 10;
+    private bool isRightHanded;
+
+    [SerializeField] private float arrowMaxSpeed = 10;
 
     [SerializeField] private AudioSource bowReleaseAudioSource;
+    public float InputThreshold = 1.0f;
+
+    public XRNode inputSource2;
+
+    public InputHelpers.Button inputButton23;
+
+    public Collider bowHandleCollider;
+    public bool maindroiteArc;
 
 
+    public void Update()
+    {
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton23, out bool rightHand,
+            InputThreshold);
+        isRightHanded = rightHand;
+    }
+
+    
     public void PrepareArrow()
     {
-        midPointVisual.SetActive(true);
+        if (maindroiteArc)
+        {
+            leftmidPointVisual.SetActive(true);
+            rightmidPointVisual.SetActive(false);
+        }
+        else
+        {
+            rightmidPointVisual.SetActive(true);
+            leftmidPointVisual.SetActive(false);
+        }
     }
 
     public void ReleaseArrow(float strength)
     {
-        bowReleaseAudioSource.Play();
-        midPointVisual.SetActive(false);
-
-        GameObject arrow = Instantiate(arrowPrefab);
-        arrow.transform.position = arrowSpawnPoint.transform.position;
-        arrow.transform.rotation = midPointVisual.transform.rotation;
-        Rigidbody rb = arrow.GetComponent<Rigidbody>();
-        rb.AddForce(midPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);
-        
+        if (maindroiteArc)
+        {
+            bowReleaseAudioSource.Play();
+            leftmidPointVisual.SetActive(false);
+            GameObject arrow = Instantiate(arrowPrefab);
+            arrow.transform.position = leftarrowSpawnPoint.transform.position;
+            arrow.transform.rotation = leftmidPointVisual.transform.rotation;
+            Rigidbody rb = arrow.GetComponent<Rigidbody>();
+            rb.AddForce(leftmidPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);
+        }
+        else
+        {
+            bowReleaseAudioSource.Play();
+            rightmidPointVisual.SetActive(false);
+            GameObject arrow = Instantiate(arrowPrefab);
+            arrow.transform.position = rightarrowSpawnPoint.transform.position;
+            arrow.transform.rotation = rightmidPointVisual.transform.rotation;
+            Rigidbody rb = arrow.GetComponent<Rigidbody>();
+            rb.AddForce(rightmidPointVisual.transform.forward * strength * arrowMaxSpeed, ForceMode.Impulse);
+        }
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Controller") && isRightHanded)
+        {
+            maindroiteArc = true;
+        }
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Controller") && isRightHanded)
+        {
+            maindroiteArc = true;
+        }
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Controller"))
+        {
+            maindroiteArc = false;
+        }
     }
 }
+
+
+

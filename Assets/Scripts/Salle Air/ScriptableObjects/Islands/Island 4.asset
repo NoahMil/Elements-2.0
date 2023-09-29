@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: Island 4
   m_EditorClassIdentifier: 
   targets:
-  - {fileID: 11400000, guid: 66b25573b2b962e4389816c7aa4e3921, type: 2}
   - {fileID: 11400000, guid: ba0c854f051d7454290ebd5a8376ac9e, type: 2}
   - {fileID: 11400000, guid: ede90f0a5a923814cb118009f391376f, type: 2}
-  - {fileID: 11400000, guid: 404f0b8e28010fb4d88c6c84a8137fe3, type: 2}
   - {fileID: 11400000, guid: 65d362f1f3c0762439c2cfe4e9cf8f2c, type: 2}
   islandComplete: 0

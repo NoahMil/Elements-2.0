@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class ArrowDestruction : MonoBehaviour
 {
@@ -12,6 +13,6 @@ public class ArrowDestruction : MonoBehaviour
         {
             collider.isTrigger = false;
         }
-        Destroy(transform.parent.gameObject, delayDestruction);
+        Destroy(gameObject, delayDestruction);
     }
 }

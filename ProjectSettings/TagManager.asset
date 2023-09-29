@@ -9,6 +9,7 @@ TagManager:
   - Meteor
   - Floor
   - Void
+  - Controller
   layers:
   - Default
   - TransparentFX

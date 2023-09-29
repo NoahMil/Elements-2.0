@@ -8,9 +8,13 @@ public class VRControllerInput : MonoBehaviour
     public XRNode inputSource1;
     public XRNode inputSource2;
 
-    public InputHelpers.Button inputButton1;
+    public InputHelpers.Button inputButton11;
+    public InputHelpers.Button inputButton12;
+
+    
     public InputHelpers.Button inputButton21;
     public InputHelpers.Button inputButton22;
+    public InputHelpers.Button inputButton23;
 
     public float InputThreshold = 1.0f;
     public Transform playerTransform;
@@ -20,17 +24,18 @@ public class VRControllerInput : MonoBehaviour
     private bool canScroll = true; // Peut faire défiler dès le début
     private float teleportCooldown = 1.0f; // Temps de recharge entre les téléportations
     private float scrollCooldown = 1.0f; // Temps de recharge entre les défilements
+    public bool isLeftHanded;
+    public bool isRightHanded;
 
-    private void Start()
-    {
-    }
-
+    
     void Update()
     {
-        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton1, out bool TeleportationPressed, InputThreshold);
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton11, out bool TeleportationPressed, InputThreshold);
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton21, out bool ScrollUp, InputThreshold);
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton22, out bool ScrollDown, InputThreshold);
+        InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton12, out bool RightHand, InputThreshold);
 
+        
         if (TeleportationPressed && canTeleport)
         {
             StartCoroutine(TeleportCooldown());
