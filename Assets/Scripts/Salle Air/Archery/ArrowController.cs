@@ -25,8 +25,7 @@ public class ArrowController : MonoBehaviour
 
     public InputHelpers.Button inputButton23;
 
-    public Collider bowHandleCollider;
-    public bool maindroiteArc;
+    private bool maindroiteArc;
 
 
     public void Update()

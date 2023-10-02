@@ -16,8 +16,6 @@ public class ScoreArchery : MonoBehaviour
     public GameObject totemReward;
     public int score = 0;
     
-    private int checkArcheryCallCount = 0; // Variable pour compter les appels de CheckArchery
-
 
     private void OnEnable()
     {

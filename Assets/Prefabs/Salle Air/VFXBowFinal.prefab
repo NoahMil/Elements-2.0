@@ -44,10 +44,10 @@ GameObject:
   - component: {fileID: 4517636057924897718}
   - component: {fileID: 1825410607865462599}
   - component: {fileID: 1825410607865462648}
-  - component: {fileID: -1160335480110709092}
   - component: {fileID: 1825410607865462649}
   - component: {fileID: 1825410607865462650}
   - component: {fileID: 1825410607865462651}
+  - component: {fileID: -1118935894495645639}
   m_Layer: 3
   m_Name: VFXBowFinal
   m_TagString: Untagged
@@ -147,26 +147,11 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-1160335480110709092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2715989979669178979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2ece7aab997e64d8270fb7d4f482ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  degreesPerSecond: 0.2
-  amplitude: 0.1
-  frequency: 0.3
 --- !u!114 &1825410607865462649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,7 +338,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _arrowcontroller: {fileID: 1825410607865462651}
 --- !u!114 &1825410607865462651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,8 +361,19 @@ MonoBehaviour:
   InputThreshold: 1
   inputSource2: 5
   inputButton23: 3
-  bowHandleCollider: {fileID: 1825410607865462599}
-  maindroiteArc: 0
+--- !u!65 &-1118935894495645639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2715989979669178979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3033826, y: 0.098747574, z: 1.3084167}
+  m_Center: {x: -0.08243562, y: -0.000102557264, z: 0.00083521026}
 --- !u!1 &3774743876743350797
 GameObject:
   m_ObjectHideFlags: 0

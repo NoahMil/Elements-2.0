@@ -30,8 +30,6 @@ public class BowStringController : MonoBehaviour
     private bool onFloor = false;
     private float onFloorDelay = 0f;
 
-    public ArrowController _arrowcontroller;
-
 
     private void Awake()
     {
@@ -186,4 +184,6 @@ public class BowStringController : MonoBehaviour
             onFloorDelay = 0f;
         }
     }
+
+
 }
