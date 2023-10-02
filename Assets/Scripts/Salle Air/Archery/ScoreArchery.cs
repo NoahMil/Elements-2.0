@@ -9,10 +9,11 @@ using UnityEngine;
 public class ScoreArchery : MonoBehaviour
 {
     [SerializeField] private Epreuve AirScriptable;
+    [SerializeField] private Island _island;
     [SerializeField] private List<Island> _islandsList;
-
     [SerializeField] private GameObject startMenu;
     public TextMeshProUGUI ScoreText;
+
     public GameObject totemReward;
     public int score = 0;
     
@@ -35,8 +36,9 @@ public class ScoreArchery : MonoBehaviour
 
     public void UpdateScore()
     {
-        ScoreText.text = "Ile completée : " + score + "/7";
+        ScoreText.text = "Ile complétée : " + score + "/7";
     }
+    
 
     private void Update()
     {

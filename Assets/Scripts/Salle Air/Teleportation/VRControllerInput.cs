@@ -40,7 +40,7 @@ public class VRControllerInput : MonoBehaviour
         {
             StartCoroutine(TeleportCooldown());
             canTeleport = false; // Désactive la possibilité de téléporter
-
+            
             waypoints[currentIndex].TeleportPlayer(playerTransform);
             foreach (TeleportWaypoint waypoint in waypoints)
             {

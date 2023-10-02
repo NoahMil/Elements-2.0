@@ -7,6 +7,8 @@ public class Island : ScriptableObject
 {
     public List<Target> targets;
     public bool islandComplete;
+    public int targetscore;
+    public int targetNb;
 
     public bool AreAllTargetsDestroyed()
     {
