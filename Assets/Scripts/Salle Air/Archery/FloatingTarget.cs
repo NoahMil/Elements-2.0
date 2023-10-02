@@ -15,6 +15,7 @@ public class FloatingTarget : MonoBehaviour, IHittable
     {
         _target.hp = _target.hpMax;
         _target.targetDestroyed = false;
+        _target.targetCounted = false;
         _renderer = GetComponent<Renderer>();
     }
     

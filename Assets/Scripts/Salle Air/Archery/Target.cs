@@ -8,4 +8,6 @@ public class Target : ScriptableObject
     public int hpMax = 2;
     public int hp;
     public bool targetDestroyed;
+    public bool targetCounted; 
+
 }

@@ -9,7 +9,6 @@ using UnityEngine;
 public class ScoreArchery : MonoBehaviour
 {
     [SerializeField] private Epreuve AirScriptable;
-    [SerializeField] private Island _island;
     [SerializeField] private List<Island> _islandsList;
     [SerializeField] private GameObject startMenu;
     public TextMeshProUGUI ScoreText;
@@ -32,11 +31,22 @@ public class ScoreArchery : MonoBehaviour
     private void Start()
     {
         score = 0;
+        foreach (Island island in _islandsList)
+        {
+            island.targetscore = 0;
+            island.islandComplete = false;
+        }
+        
     }
 
     public void UpdateScore()
     {
         ScoreText.text = "Ile complétée : " + score + "/7";
+        foreach (Island island in _islandsList)
+        {
+            island.ScoreTextUI.text = island.targetscore + "/" + island.targetNb;
+            Canvas.ForceUpdateCanvases();
+        }
     }
     
 
@@ -64,8 +74,10 @@ public class ScoreArchery : MonoBehaviour
         {
             foreach (Target target in island.targets)
             {
-                if (target.targetDestroyed)
+                if (target.targetDestroyed && !target.targetCounted)
                 {
+                    island.targetscore++;
+                    target.targetCounted = true;
                     if (island.AreAllTargetsDestroyed() && !island.islandComplete)
                     {
                         island.islandComplete = true;

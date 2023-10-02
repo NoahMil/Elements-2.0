@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c99f3493-798e-4ab3-a503-0bf7d7043aee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/FloatingTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/FloatingTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/Island.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/Island.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/LineRendererManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/LineRendererManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScoreArchery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScoreArchery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/BowSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/BowSpawn.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/IslandsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/IslandsUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_HDRP_Patch.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_URP_Patch.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Plan_Iles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Plan_Iles.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +98,7 @@
       <workItem from="1695463046966" duration="16174000" />
       <workItem from="1695896007298" duration="17504000" />
       <workItem from="1695974184926" duration="4040000" />
-      <workItem from="1696265702983" duration="3816000" />
+      <workItem from="1696265702983" duration="14890000" />
     </task>
     <servers />
   </component>

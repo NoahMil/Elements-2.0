@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.PlayerLoop;
 
 
 [CreateAssetMenu(fileName = "Island")]
@@ -13,18 +14,17 @@ public class Island : ScriptableObject
     public int targetscore;
     public int targetNb;
 
+
     public bool AreAllTargetsDestroyed()
     {
         foreach (Target target in targets)
         {
             if (!target.targetDestroyed)
             {
-                targetscore++;
-                ScoreTextUI.text = targetscore + "/" + targetNb;
                 return false;
             }
         }
         return true;
     }
-    
+
 }

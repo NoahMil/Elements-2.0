@@ -8,8 +8,4 @@ public class IslandsUI : MonoBehaviour
     public List<Island> _listIsland;
     public TextMeshProUGUI ScoreTextUI;
     
-    public void Start()
-    {
-        ScoreTextUI.text = "Ile complétée : " + "/7";
-    }
 }

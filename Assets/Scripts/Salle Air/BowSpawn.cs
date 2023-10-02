@@ -19,8 +19,6 @@ public class BowSpawn : MonoBehaviour
     void SpawnObject()
     {
         spawnedObject = Instantiate(prefabToSpawn, spawnPoint.position, spawnPoint.rotation);
-        rb.isKinematic = true;
-        rb.useGravity = false;
     }
 
     public void Update()
