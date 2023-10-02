@@ -10,6 +10,6 @@ public class IslandsUI : MonoBehaviour
     
     public void Start()
     {
-        ScoreTextUI.text = "Ile complétée : " + _listIsland. + "/7";
+        ScoreTextUI.text = "Ile complétée : " + "/7";
     }
 }
