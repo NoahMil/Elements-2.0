@@ -1,17 +1,23 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TeleportWaypoint : MonoBehaviour
 {
     public Material normalMaterial;
+    public VRControllerInput _vrControllerInput;
     public Material selectedMaterial;
     private Renderer waypointRenderer;
     private bool isSelected = false;
-    public GameObject objectPrefab; // Référence au préfab à instancier
-    public float prefabHeight = 2.0f; // Hauteur du préfab au-dessus du waypoint
-    public Vector3 prefabRotation; // Rotation à appliquer au préfab
+    public GameObject objectPrefab; 
+    public float prefabHeight = 2.0f; 
+    public Vector3 prefabRotation; 
     public GameObject spawnPositionPlayer;
-    private GameObject spawnedPrefab; // Référence à l'objet instancié
+    private GameObject spawnedPrefab; 
     public AudioSource teleportSE;
+    public GameObject[] islandSelectedPlan;
+    private GameObject islandSelectedPlanFinal;
+    private GameObject spawnedPlan; 
+
 
     void Start()
     {
@@ -24,15 +30,17 @@ public class TeleportWaypoint : MonoBehaviour
         isSelected = selected;
         waypointRenderer.material = selected ? selectedMaterial : normalMaterial;
 
-        if(selected && objectPrefab != null)
+        if(selected && objectPrefab != null && islandSelectedPlan != null)
         {
             Vector3 spawnPosition = transform.position + Vector3.up * prefabHeight;
             spawnedPrefab = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(prefabRotation));
+            islandSelectedPlanFinal = Instantiate(islandSelectedPlan[_vrControllerInput.currentIndex]);
         }
         else
         {
-            if(spawnedPrefab != null)
+            if(spawnedPrefab != null && islandSelectedPlanFinal !=null)
             {
+                Destroy(islandSelectedPlanFinal);
                 Destroy(spawnedPrefab);
             }
         }

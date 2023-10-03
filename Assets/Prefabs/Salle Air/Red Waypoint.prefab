@@ -98,12 +98,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: ce6b387709e178145bf8976a9f600270, type: 2}
+  _vrControllerInput: {fileID: 1839870376326598079, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
+    type: 3}
   selectedMaterial: {fileID: 2100000, guid: 5ae44c0afdcda7e4aae648d8136bdb8d, type: 2}
   objectPrefab: {fileID: 677159090373542785, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
     type: 3}
   prefabHeight: 9
   prefabRotation: {x: 90, y: 90, z: 0}
   spawnPositionPlayer: {fileID: 6639744195957743030}
+  teleportSE: {fileID: 0}
+  islandSelectedPlan:
+  - {fileID: 2299865295841929465, guid: 8c72b443694e31f4da8517f2b9e442e4, type: 3}
+  - {fileID: 8675813610635021251, guid: c0bca2ffd8944f541877e78a146fc825, type: 3}
+  - {fileID: 4437216038505552207, guid: dcfb05d75d50af74ca79517f4dab57c7, type: 3}
+  - {fileID: 2211821978240264631, guid: 465916dbcefc53648a3fc5d8c2770ebf, type: 3}
+  - {fileID: 7391777095355175635, guid: 39b39ad9d84470a4cad38ed4e18e6058, type: 3}
+  - {fileID: 7097090992672123146, guid: 35d5337ba75c37e4a8ae76da42ab385c, type: 3}
+  - {fileID: 3952225299437104472, guid: b6015edcb8b6c9d41885ce6c58e98eec, type: 3}
 --- !u!1 &6639744195957743030
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class ScoreArchery : MonoBehaviour
 {
     [SerializeField] private Epreuve AirScriptable;
     [SerializeField] private List<Island> _islandsList;
+    [SerializeField] private TextMeshProUGUI[] _islandsListGUI;
     [SerializeField] private GameObject startMenu;
     public TextMeshProUGUI ScoreText;
 
@@ -42,11 +43,17 @@ public class ScoreArchery : MonoBehaviour
     public void UpdateScore()
     {
         ScoreText.text = "Ile complétée : " + score + "/7";
+      
         foreach (Island island in _islandsList)
         {
             island.ScoreTextUI.text = island.targetscore + "/" + island.targetNb;
-            Canvas.ForceUpdateCanvases();
         }
+        
+        for (int i = 0; i <= 6; i++)
+        {
+            _islandsListGUI[i].text = _islandsList[i].ScoreTextUI.text;
+        }
+        
     }
     
 

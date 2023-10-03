@@ -19,13 +19,13 @@ public class VRControllerInput : MonoBehaviour
     public float InputThreshold = 1.0f;
     public Transform playerTransform;
     public TeleportWaypoint[] waypoints;
-    private int currentIndex = 0;
+
+    public int currentIndex = 0;
     private bool canTeleport = true; // Peut téléporter dès le début
     private bool canScroll = true; // Peut faire défiler dès le début
     private float teleportCooldown = 1.0f; // Temps de recharge entre les téléportations
     private float scrollCooldown = 1.0f; // Temps de recharge entre les défilements
-    public bool isLeftHanded;
-    public bool isRightHanded;
+
 
     
     void Update()
@@ -70,6 +70,7 @@ public class VRControllerInput : MonoBehaviour
         waypoints[currentIndex].SetSelected(false);
         currentIndex = (currentIndex + direction + waypoints.Length) % waypoints.Length;        
         waypoints[currentIndex].SetSelected(true);
+
     }
 
     IEnumerator TeleportCooldown()
