@@ -26,7 +26,6 @@ public class VRControllerInput : MonoBehaviour
     private bool canScroll = true;  
     float teleportCooldown = 1.0f; 
     private float scrollCooldown = 1.0f;
-    private GameObject islandPlan;
 
     private void Start()
     {
@@ -49,6 +48,11 @@ public class VRControllerInput : MonoBehaviour
             foreach (TeleportWaypoint waypoint in waypoints)
             {
                 waypoint.SetSelected(false, currentIndex);
+                waypoint.islandPlan.SetActive(true);
+                if (TeleportationPressed && canTeleport)
+                {
+                    waypoint.islandPlan.SetActive(false);
+                }
             }
         }
 
@@ -80,13 +84,13 @@ public class VRControllerInput : MonoBehaviour
     IEnumerator TeleportCooldown()
     {
         yield return new WaitForSeconds(teleportCooldown);
-        canTeleport = true; // Réactive la possibilité de téléporter
+        canTeleport = true; 
     }
 
     IEnumerator ScrollCooldown()
     {
         yield return new WaitForSeconds(scrollCooldown);
-        canScroll = true; // Réactive la possibilité de faire défiler
+        canScroll = true; 
     }
 }
 

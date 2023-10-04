@@ -9,36 +9,37 @@ public class TeleportWaypoint : MonoBehaviour
     public Material selectedMaterial;
     private Renderer waypointRenderer;
     private bool isSelected;
-    public GameObject objectPrefab; 
-    public float prefabHeight = 2.0f; 
-    public Vector3 prefabRotation; 
+    public GameObject objectPrefab;
+    public float prefabHeight = 2.0f;
+    public Vector3 prefabRotation;
     public GameObject spawnPositionPlayer;
-    private GameObject spawnedPrefab; 
+    private GameObject spawnedPrefab;
     public AudioSource teleportSE;
     public SpriteRenderer[] islandSelectedPlan;
     private GameObject islandSelectedPlanFinal;
-    private GameObject spawnedPlan;
-    
+    public GameObject islandPlan;
+
     void Start()
     {
         waypointRenderer = GetComponent<Renderer>();
         waypointRenderer.material = normalMaterial;
     }
-
+    
     public void SetSelected(bool selected, int index)
     {
         isSelected = selected;
         waypointRenderer.material = selected ? selectedMaterial : normalMaterial;
-        if(selected && objectPrefab != null && islandSelectedPlan[index] != null)
-        { 
+        if (selected && objectPrefab != null && islandSelectedPlan[index] != null)
+        {
             Vector3 spawnPosition = transform.position + Vector3.up * prefabHeight;
             spawnedPrefab = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(prefabRotation));
             islandSelectedPlan[index].enabled = true;
             //     islandSelectedPlanFinal = Instantiate(islandSelectedPlan[index]);
         }
+
         else
         {
-            if(spawnedPrefab != null && islandSelectedPlan[index] != null)
+            if (spawnedPrefab != null && islandSelectedPlan[index] != null)
             {
                 islandSelectedPlan[index].enabled = false;
                 Destroy(islandSelectedPlanFinal);
@@ -46,9 +47,10 @@ public class TeleportWaypoint : MonoBehaviour
             }
         }
     }
-
+    
     public void TeleportPlayer(Transform playerTransform)
     {
+        
         teleportSE.Play();
         playerTransform.position = spawnPositionPlayer.transform.position;
         playerTransform.rotation = spawnPositionPlayer.transform.rotation;
