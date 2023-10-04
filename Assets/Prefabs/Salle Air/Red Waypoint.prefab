@@ -108,13 +108,13 @@ MonoBehaviour:
   spawnPositionPlayer: {fileID: 6639744195957743030}
   teleportSE: {fileID: 0}
   islandSelectedPlan:
-  - {fileID: 2299865295841929465, guid: 8c72b443694e31f4da8517f2b9e442e4, type: 3}
-  - {fileID: 8675813610635021251, guid: c0bca2ffd8944f541877e78a146fc825, type: 3}
-  - {fileID: 4437216038505552207, guid: dcfb05d75d50af74ca79517f4dab57c7, type: 3}
-  - {fileID: 2211821978240264631, guid: 465916dbcefc53648a3fc5d8c2770ebf, type: 3}
-  - {fileID: 7391777095355175635, guid: 39b39ad9d84470a4cad38ed4e18e6058, type: 3}
-  - {fileID: 7097090992672123146, guid: 35d5337ba75c37e4a8ae76da42ab385c, type: 3}
-  - {fileID: 3952225299437104472, guid: b6015edcb8b6c9d41885ce6c58e98eec, type: 3}
+  - {fileID: 7986480648761453123, guid: 1e9944663f3f95d49994b55d2d2c3b12, type: 3}
+  - {fileID: 3419122925826578130, guid: 6f8d0331255698a4ba10cad4bb5f879e, type: 3}
+  - {fileID: 5625248362490653848, guid: 2b777ebc177c7554c841d7e255047ae8, type: 3}
+  - {fileID: 5183921954044181617, guid: c472ab1269087da47a48fa42866551c1, type: 3}
+  - {fileID: 1184799355855818676, guid: e24d549be1797514f88d2eea9f04eb25, type: 3}
+  - {fileID: 8666203551538642157, guid: b0c311169785fe4498edba9ca955bb3b, type: 3}
+  - {fileID: 3493781835163879811, guid: 752b527aee3cbab419edc36f26d60583, type: 3}
 --- !u!1 &6639744195957743030
 GameObject:
   m_ObjectHideFlags: 0

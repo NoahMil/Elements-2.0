@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,39 +8,39 @@ public class TeleportWaypoint : MonoBehaviour
     public VRControllerInput _vrControllerInput;
     public Material selectedMaterial;
     private Renderer waypointRenderer;
-    private bool isSelected = false;
+    private bool isSelected;
     public GameObject objectPrefab; 
     public float prefabHeight = 2.0f; 
     public Vector3 prefabRotation; 
     public GameObject spawnPositionPlayer;
     private GameObject spawnedPrefab; 
     public AudioSource teleportSE;
-    public GameObject[] islandSelectedPlan;
+    public SpriteRenderer[] islandSelectedPlan;
     private GameObject islandSelectedPlanFinal;
-    private GameObject spawnedPlan; 
-
-
+    private GameObject spawnedPlan;
+    
     void Start()
     {
         waypointRenderer = GetComponent<Renderer>();
         waypointRenderer.material = normalMaterial;
     }
 
-    public void SetSelected(bool selected)
+    public void SetSelected(bool selected, int index)
     {
         isSelected = selected;
         waypointRenderer.material = selected ? selectedMaterial : normalMaterial;
-
-        if(selected && objectPrefab != null && islandSelectedPlan != null)
-        {
+        if(selected && objectPrefab != null && islandSelectedPlan[index] != null)
+        { 
             Vector3 spawnPosition = transform.position + Vector3.up * prefabHeight;
             spawnedPrefab = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(prefabRotation));
-            islandSelectedPlanFinal = Instantiate(islandSelectedPlan[_vrControllerInput.currentIndex]);
+            islandSelectedPlan[index].enabled = true;
+            //     islandSelectedPlanFinal = Instantiate(islandSelectedPlan[index]);
         }
         else
         {
-            if(spawnedPrefab != null && islandSelectedPlanFinal !=null)
+            if(spawnedPrefab != null && islandSelectedPlan[index] != null)
             {
+                islandSelectedPlan[index].enabled = false;
                 Destroy(islandSelectedPlanFinal);
                 Destroy(spawnedPrefab);
             }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.XR;
@@ -20,14 +21,18 @@ public class VRControllerInput : MonoBehaviour
     public Transform playerTransform;
     public TeleportWaypoint[] waypoints;
 
-    public int currentIndex = 0;
-    private bool canTeleport = true; // Peut téléporter dès le début
-    private bool canScroll = true; // Peut faire défiler dès le début
-    private float teleportCooldown = 1.0f; // Temps de recharge entre les téléportations
-    private float scrollCooldown = 1.0f; // Temps de recharge entre les défilements
+    public int currentIndex;
+    private bool canTeleport = true; 
+    private bool canScroll = true;  
+    float teleportCooldown = 1.0f; 
+    private float scrollCooldown = 1.0f;
+    private GameObject islandPlan;
 
+    private void Start()
+    {
+        currentIndex = 0;
+    }
 
-    
     void Update()
     {
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton11, out bool TeleportationPressed, InputThreshold);
@@ -39,19 +44,18 @@ public class VRControllerInput : MonoBehaviour
         if (TeleportationPressed && canTeleport)
         {
             StartCoroutine(TeleportCooldown());
-            canTeleport = false; // Désactive la possibilité de téléporter
-            
+            canTeleport = false;
             waypoints[currentIndex].TeleportPlayer(playerTransform);
             foreach (TeleportWaypoint waypoint in waypoints)
             {
-                waypoint.SetSelected(false);
+                waypoint.SetSelected(false, currentIndex);
             }
         }
 
         if (ScrollUp && canScroll)
         {
             StartCoroutine(ScrollCooldown());
-            canScroll = false; // Désactive la possibilité de faire défiler
+            canScroll = false; 
 
             ScrollWaypoints(1);
         }
@@ -59,7 +63,7 @@ public class VRControllerInput : MonoBehaviour
         if (ScrollDown && canScroll)
         {
             StartCoroutine(ScrollCooldown());
-            canScroll = false; // Désactive la possibilité de faire défiler
+            canScroll = false; 
 
             ScrollWaypoints(-1);
         }
@@ -67,9 +71,9 @@ public class VRControllerInput : MonoBehaviour
 
     void ScrollWaypoints(int direction)
     {
-        waypoints[currentIndex].SetSelected(false);
-        currentIndex = (currentIndex + direction + waypoints.Length) % waypoints.Length;        
-        waypoints[currentIndex].SetSelected(true);
+        waypoints[currentIndex].SetSelected(false, currentIndex);
+        currentIndex = (currentIndex + direction + waypoints.Length) % waypoints.Length;
+        waypoints[currentIndex].SetSelected(true, currentIndex);
 
     }
 
