@@ -1817,7 +1817,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1084156778}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327386c70bf6be448aa004f69443ad49, type: 3}
   m_Name: 
@@ -2350,7 +2350,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1994261226}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327386c70bf6be448aa004f69443ad49, type: 3}
   m_Name: 
@@ -3457,6 +3457,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
+        type: 3}
       propertyPath: islandPlan
       value: 
       objectReference: {fileID: 2089093628}
@@ -4402,6 +4407,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1151388028623119709}
     m_Modifications:
+    - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
         type: 3}
       propertyPath: islandPlan
@@ -5623,7 +5633,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1909540989}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327386c70bf6be448aa004f69443ad49, type: 3}
   m_Name: 
@@ -6273,6 +6283,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad818c36731146e994540a1896ad8f24, type: 3}
 --- !u!1 &739026100
@@ -6313,7 +6328,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 946708598}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327386c70bf6be448aa004f69443ad49, type: 3}
   m_Name: 
@@ -7117,6 +7132,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 316753549}
     m_Modifications:
+    - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
         type: 3}
       propertyPath: teleportSE
@@ -8485,6 +8505,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1151388028279659779}
     m_Modifications:
+    - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
         type: 3}
       propertyPath: islandPlan
@@ -12733,7 +12758,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 395147687}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327386c70bf6be448aa004f69443ad49, type: 3}
   m_Name: 
@@ -13460,7 +13485,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 480416626}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327386c70bf6be448aa004f69443ad49, type: 3}
   m_Name: 
@@ -13560,6 +13585,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd15754adaa78443be9ddd9cb4514bb, type: 3}
+--- !u!114 &1773913916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7462879561657043759, guid: ad818c36731146e994540a1896ad8f24,
+    type: 3}
+  m_PrefabInstance: {fileID: 733819829}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1786366822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14491,6 +14528,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
+        type: 3}
       propertyPath: islandPlan
       value: 
       objectReference: {fileID: 2122709083}
@@ -15407,6 +15449,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1151388029244924804}
     m_Modifications:
+    - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1852095206724301863, guid: a37835f99c906544c86b4ef9a28a083d,
         type: 3}
       propertyPath: islandPlan
@@ -17020,6 +17067,11 @@ PrefabInstance:
       objectReference: {fileID: 2049338478}
     - target: {fileID: 1839870376326598079, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
         type: 3}
+      propertyPath: waypoints.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839870376326598079, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
+        type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 645623954}
@@ -17279,6 +17331,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1961474424}
     m_Modifications:
+    - target: {fileID: 1986727108599353928, guid: 6338a8e907c7ab940b96a70521df619b,
+        type: 3}
+      propertyPath: m_RayInteractor
+      value: 
+      objectReference: {fileID: 1773913916}
     - target: {fileID: 2694393974738661751, guid: 6338a8e907c7ab940b96a70521df619b,
         type: 3}
       propertyPath: m_RootOrder

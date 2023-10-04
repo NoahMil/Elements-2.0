@@ -17,14 +17,21 @@ public class TeleportWaypoint : MonoBehaviour
     public AudioSource teleportSE;
     public SpriteRenderer[] islandSelectedPlan;
     private GameObject islandSelectedPlanFinal;
-    public GameObject islandPlan;
+    private GameObject spawnedPlan;
+    private int newIndex;
 
     void Start()
     {
         waypointRenderer = GetComponent<Renderer>();
         waypointRenderer.material = normalMaterial;
     }
-    
+
+    private void Update()
+    {
+        newIndex = _vrControllerInput.currentIndex;
+    }
+
+
     public void SetSelected(bool selected, int index)
     {
         isSelected = selected;
@@ -47,10 +54,9 @@ public class TeleportWaypoint : MonoBehaviour
             }
         }
     }
-    
+
     public void TeleportPlayer(Transform playerTransform)
     {
-        
         teleportSE.Play();
         playerTransform.position = spawnPositionPlayer.transform.position;
         playerTransform.rotation = spawnPositionPlayer.transform.rotation;
