@@ -15,23 +15,16 @@ public class TeleportWaypoint : MonoBehaviour
     public GameObject spawnPositionPlayer;
     private GameObject spawnedPrefab;
     public AudioSource teleportSE;
-    public SpriteRenderer[] islandSelectedPlan;
-    private GameObject islandSelectedPlanFinal;
-    private GameObject spawnedPlan;
-    private int newIndex;
+    public GameObject[] islandSelectedPlan;
+
 
     void Start()
     {
         waypointRenderer = GetComponent<Renderer>();
         waypointRenderer.material = normalMaterial;
     }
-
-    private void Update()
-    {
-        newIndex = _vrControllerInput.currentIndex;
-    }
-
-
+    
+    
     public void SetSelected(bool selected, int index)
     {
         isSelected = selected;
@@ -40,16 +33,14 @@ public class TeleportWaypoint : MonoBehaviour
         {
             Vector3 spawnPosition = transform.position + Vector3.up * prefabHeight;
             spawnedPrefab = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(prefabRotation));
-            islandSelectedPlan[index].enabled = true;
-            //     islandSelectedPlanFinal = Instantiate(islandSelectedPlan[index]);
+            islandSelectedPlan[index].SetActive(true);
         }
 
         else
         {
             if (spawnedPrefab != null && islandSelectedPlan[index] != null)
             {
-                islandSelectedPlan[index].enabled = false;
-                Destroy(islandSelectedPlanFinal);
+                islandSelectedPlan[index].SetActive(false);
                 Destroy(spawnedPrefab);
             }
         }

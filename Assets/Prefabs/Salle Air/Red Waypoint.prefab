@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2661530896781927532}
-  m_LocalRotation: {x: -0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -108,15 +108,14 @@ MonoBehaviour:
   spawnPositionPlayer: {fileID: 6639744195957743030}
   teleportSE: {fileID: 1839870376326598078, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
     type: 3}
-  islandSelectedPlan:
-  - {fileID: 2397568407406298834, guid: 1e9944663f3f95d49994b55d2d2c3b12, type: 3}
-  - {fileID: 6269351997112250323, guid: 6f8d0331255698a4ba10cad4bb5f879e, type: 3}
-  - {fileID: 1208567787138986256, guid: 2b777ebc177c7554c841d7e255047ae8, type: 3}
-  - {fileID: 5512007809697777798, guid: c472ab1269087da47a48fa42866551c1, type: 3}
-  - {fileID: 5919997360342659898, guid: e24d549be1797514f88d2eea9f04eb25, type: 3}
-  - {fileID: 6290678055969216252, guid: b0c311169785fe4498edba9ca955bb3b, type: 3}
-  - {fileID: 7159655563142254036, guid: 752b527aee3cbab419edc36f26d60583, type: 3}
-  islandPlan: {fileID: 0}
+  islandSelectedPlantest:
+  - {fileID: 4878666139833152824, guid: 8dff11ffdf427594588a81f8285aae9a, type: 3}
+  - {fileID: 5915200248472475339, guid: ec501a16906810d4fb782049663b9538, type: 3}
+  - {fileID: 6106149037233068861, guid: 45f1157a87c55d34eaf641d59dcc6d53, type: 3}
+  - {fileID: 2462586973812714681, guid: f5374eb8637a46b4a9b8f7aa90f6332f, type: 3}
+  - {fileID: 4194767348839525713, guid: efe4f5322a17bde4eb99a9a9a3525e7f, type: 3}
+  - {fileID: 3854240330275335209, guid: 377e173d0fa8b314cb9c764b1da998ec, type: 3}
+  - {fileID: 6899975472814233132, guid: cf8255fc95a38c740a35814f155014b7, type: 3}
 --- !u!1 &6639744195957743030
 GameObject:
   m_ObjectHideFlags: 0

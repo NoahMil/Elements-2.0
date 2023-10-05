@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5580766307500355011
+--- !u!1 &6106149037233068861
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5580766307500355008}
-  - component: {fileID: 5919997360342659898}
+  - component: {fileID: 6106149037233068862}
+  - component: {fileID: 6106149037233068832}
   m_Layer: 5
-  m_Name: Island 5 SpawnPoint
+  m_Name: Island 3 Selected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5580766307500355008
+  m_IsActive: 0
+--- !u!4 &6106149037233068862
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5580766307500355011}
+  m_GameObject: {fileID: 6106149037233068861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.01000023}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,14 +32,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!212 &5919997360342659898
+--- !u!212 &6106149037233068832
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5580766307500355011}
-  m_Enabled: 0
+  m_GameObject: {fileID: 6106149037233068861}
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53deec5a59737984cb864db095300679, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b130655cc6d61a64c83a94d34ad1cca6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -3,13 +3,32 @@
   <component name="ChangeListManager">
     <list default="true" id="c99f3493-798e-4ab3-a503-0bf7d7043aee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/FloatingTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/FloatingTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/Island.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/Island.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScoreArchery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ScoreArchery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/Target.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/BowSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/BowSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/IslandsUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/IslandsUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Plan_Iles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Plan_Iles.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 1 SpawnPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 1 SpawnPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 2 SpawnPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 2 SpawnPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 3 SpawnPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 3 SpawnPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 4 SpawnPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 4 SpawnPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 5 SpawnPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 5 SpawnPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 6 SpawnPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 6 SpawnPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 7 SpawnPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Island 7 SpawnPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Plan Iles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Plan Iles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Plan Island.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Plan Island.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Red Waypoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Red Waypoint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Plan Iles 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Plan Iles 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Plan Iles.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Plan Iles.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/TeleportWaypoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/TeleportWaypoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_HDRP_Patch.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/_SRP/TranslucentCrystals_URP_Patch.unitypackage.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +37,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Salle Air/Archery/ArrowDestruction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Salle Air/IslandButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.15/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.2/Runtime/Interaction/Controllers/ActionBasedController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.2/Runtime/Interaction/Controllers/XRBaseController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -99,6 +119,8 @@
       <workItem from="1695896007298" duration="17504000" />
       <workItem from="1695974184926" duration="4040000" />
       <workItem from="1696265702983" duration="14890000" />
+      <workItem from="1696439048618" duration="1015000" />
+      <workItem from="1696505780911" duration="3879000" />
     </task>
     <servers />
   </component>
