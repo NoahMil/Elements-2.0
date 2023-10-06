@@ -3,33 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c99f3493-798e-4ab3-a503-0bf7d7043aee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Elements-2.0/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Red Waypoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Salle Air/Red Waypoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Prefabs/XR Origin Pieces/Ray Interactor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/2.3.2/Starter Assets/Prefabs/XR Origin Pieces/Ray Interactor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Salle Air.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 1 Text.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 1 Text.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 1 Text.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 1 Text.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 2 Text.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 2 Text.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 2 Text.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 2 Text.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 3 Text.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 3 Text.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 3 Text.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 3 Text.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 4 Text.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 4 Text.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 4 Text.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 4 Text.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 5 Text.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 5 Text.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 5 Text.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 5 Text.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 6 Text.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 6 Text.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 6 Text.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 6 Text.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 6.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 7 Text.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 7 Text.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 7 Text.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 7 Text.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Island 7.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Plan Iles 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/ScriptableObjects/Islands/Plan Iles 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/TeleportWaypoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/TeleportWaypoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/VRControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Salle Air/Teleportation/VRControllerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/troika/troika SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/troika/troika SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Demo scene/Magic effects demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Demo scene/Magic effects demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SineVFX/TranslucentCrystals/Scenes/DemoSceneGamma.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skybox/SpaceSkies Free/Skybox_3/Purple_2K_Resolution.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skybox/SpaceSkies Free/Skybox_3/Purple_2K_Resolution.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +108,8 @@
       <workItem from="1696439048618" duration="1015000" />
       <workItem from="1696505780911" duration="4523000" />
       <workItem from="1696587196048" duration="14349000" />
+      <workItem from="1696622424603" duration="2164000" />
+      <workItem from="1696626013849" duration="1580000" />
     </task>
     <servers />
   </component>
