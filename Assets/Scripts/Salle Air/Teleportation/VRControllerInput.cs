@@ -21,7 +21,7 @@ public class VRControllerInput : MonoBehaviour
     public Transform playerTransform;
     public TeleportWaypoint[] waypoints;
 
-    public int currentIndex;
+    private int currentIndex;
     private bool canTeleport = true; 
     private bool canScroll = true;  
     float teleportCooldown = 1.0f; 
@@ -39,6 +39,8 @@ public class VRControllerInput : MonoBehaviour
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton21, out bool ScrollUp, InputThreshold);
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource2), inputButton22, out bool ScrollDown, InputThreshold);
         InputHelpers.IsPressed(InputDevices.GetDeviceAtXRNode(inputSource1), inputButton12, out bool RightHand, InputThreshold);
+        
+        Debug.Log(currentIndex);
 
         
         if (TeleportationPressed && canTeleport)
@@ -87,6 +89,14 @@ public class VRControllerInput : MonoBehaviour
     {
         yield return new WaitForSeconds(scrollCooldown);
         canScroll = true; 
+    }
+    
+    public void SelectWaypoint(int index)
+    {
+        currentIndex = index;
+        waypoints[currentIndex].SetSelected(true, currentIndex);
+        canTeleport = true; 
+
     }
 }
 

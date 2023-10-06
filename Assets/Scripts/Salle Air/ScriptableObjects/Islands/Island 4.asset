@@ -17,8 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ede90f0a5a923814cb118009f391376f, type: 2}
   - {fileID: 11400000, guid: 65d362f1f3c0762439c2cfe4e9cf8f2c, type: 2}
   islandComplete: 0
-  ScoreTextUI: {fileID: 8683292856473919957, guid: ace18093173c9b844ab46a807b575be9,
+  ScoreTextUI: {fileID: 5688780953535216060, guid: ace18093173c9b844ab46a807b575be9,
     type: 3}
-  planIsland: []
   targetscore: 0
   targetNb: 3

@@ -9,13 +9,14 @@ public class TeleportWaypoint : MonoBehaviour
     public Material selectedMaterial;
     private Renderer waypointRenderer;
     private bool isSelected;
-    public GameObject objectPrefab;
+    public GameObject pointer;
     public float prefabHeight = 2.0f;
     public Vector3 prefabRotation;
     public GameObject spawnPositionPlayer;
     private GameObject spawnedPrefab;
     public AudioSource teleportSE;
     public GameObject[] islandSelectedPlan;
+    public int test;
 
 
     void Start()
@@ -24,25 +25,31 @@ public class TeleportWaypoint : MonoBehaviour
         waypointRenderer.material = normalMaterial;
     }
     
+    public void Selected(int index)
+    {
+        SetSelected(true, index);
+        test = index;
+    }
+    
+    
     
     public void SetSelected(bool selected, int index)
     {
         isSelected = selected;
         waypointRenderer.material = selected ? selectedMaterial : normalMaterial;
-        if (selected && objectPrefab != null && islandSelectedPlan[index] != null)
+        if (selected && pointer != null && islandSelectedPlan[index] != null)
         {
-            Vector3 spawnPosition = transform.position + Vector3.up * prefabHeight;
-            spawnedPrefab = Instantiate(objectPrefab, spawnPosition, Quaternion.Euler(prefabRotation));
+            pointer.SetActive(true);
             islandSelectedPlan[index].SetActive(true);
         }
 
         else
         {
-            if (spawnedPrefab != null && islandSelectedPlan[index] != null)
+            if (pointer != null && islandSelectedPlan[index] != null)
             {
-                islandSelectedPlan[index].SetActive(false);
-                Destroy(spawnedPrefab);
-            }
+                pointer.SetActive(false);
+                islandSelectedPlan[index].SetActive(false); 
+            } 
         }
     }
 

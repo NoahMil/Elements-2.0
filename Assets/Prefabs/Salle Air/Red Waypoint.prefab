@@ -32,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6175092113264930490}
+  - {fileID: 7133844248275775506}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,21 +102,13 @@ MonoBehaviour:
   _vrControllerInput: {fileID: 1839870376326598079, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
     type: 3}
   selectedMaterial: {fileID: 2100000, guid: 5ae44c0afdcda7e4aae648d8136bdb8d, type: 2}
-  objectPrefab: {fileID: 677159090373542785, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
-    type: 3}
+  pointer: {fileID: 7515189603624594088}
   prefabHeight: 9
   prefabRotation: {x: 90, y: 90, z: 0}
   spawnPositionPlayer: {fileID: 6639744195957743030}
   teleportSE: {fileID: 1839870376326598078, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
     type: 3}
-  islandSelectedPlantest:
-  - {fileID: 4878666139833152824, guid: 8dff11ffdf427594588a81f8285aae9a, type: 3}
-  - {fileID: 5915200248472475339, guid: ec501a16906810d4fb782049663b9538, type: 3}
-  - {fileID: 6106149037233068861, guid: 45f1157a87c55d34eaf641d59dcc6d53, type: 3}
-  - {fileID: 2462586973812714681, guid: f5374eb8637a46b4a9b8f7aa90f6332f, type: 3}
-  - {fileID: 4194767348839525713, guid: efe4f5322a17bde4eb99a9a9a3525e7f, type: 3}
-  - {fileID: 3854240330275335209, guid: 377e173d0fa8b314cb9c764b1da998ec, type: 3}
-  - {fileID: 6899975472814233132, guid: cf8255fc95a38c740a35814f155014b7, type: 3}
+  islandSelectedPlan: []
 --- !u!1 &6639744195957743030
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,3 +140,89 @@ Transform:
   m_Father: {fileID: 3433001390192574166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7002694699897383209
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3433001390192574166}
+    m_Modifications:
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 677159090373542785, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_Name
+      value: Pointer Island
+      objectReference: {fileID: 0}
+    - target: {fileID: 677159090373542785, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6, type: 3}
+--- !u!4 &7133844248275775506 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 157080862269380923, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7002694699897383209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7515189603624594088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 677159090373542785, guid: c46b060ca1fe5ec45b7cbc7b74d61dd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7002694699897383209}
+  m_PrefabAsset: {fileID: 0}
