@@ -41,12 +41,12 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _CastShadows: 1
-    - _Cull: 0
+    - _Cull: 2
     - _DstBlend: 10
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Scale: 10
-    - _Speed: 4.23
+    - _Scale: 1.16
+    - _Speed: 4.08
     - _SrcBlend: 5
     - _Surface: 1
     - _Twirl_Strength: 20.4
