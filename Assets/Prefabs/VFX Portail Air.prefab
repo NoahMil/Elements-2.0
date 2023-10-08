@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 2
   fadeScreen: {fileID: 0}
+  teleportationSE: {fileID: 0}
 --- !u!65 &826492207213497680
 BoxCollider:
   m_ObjectHideFlags: 0

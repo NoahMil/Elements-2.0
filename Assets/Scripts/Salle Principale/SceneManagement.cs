@@ -7,9 +7,11 @@ public class SceneManagement : MonoBehaviour
 {
     public int sceneIndex;
     public FadeScreen fadeScreen;
+    public AudioSource teleportationSE;
 
     private void OnTriggerEnter(Collider other)
     {
+        teleportationSE.Play();
         GoToScene(sceneIndex);
     }
 
