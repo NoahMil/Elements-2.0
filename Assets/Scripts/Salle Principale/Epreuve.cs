@@ -10,7 +10,7 @@ public class Epreuve : ScriptableObject
     public GameObject totem;
     public GameObject portal;
     public GameObject vfxPortal;
- //   public GameObject destroyedPortal;
+    public GameObject destroyedPortal;
 
 }
 

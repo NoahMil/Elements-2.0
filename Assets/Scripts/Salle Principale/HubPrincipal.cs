@@ -11,6 +11,17 @@ public class HubPrincipal : MonoBehaviour
     private void Start()
     {
         CheckEpreuves();
+        
+        foreach (Epreuve epreuves in _listeEpreuve.Epreuves)
+        {
+            { 
+                finalEscaliers.SetActive(false); 
+                epreuves.totem.SetActive(false);
+                epreuves.destroyedPortal.SetActive(false);
+                epreuves.vfxPortal.SetActive(true);
+                epreuves.portal.SetActive(true);
+            }
+        }
     }
     
     public void CheckEpreuves()
@@ -18,11 +29,11 @@ public class HubPrincipal : MonoBehaviour
         foreach (Epreuve epreuves in _listeEpreuve.Epreuves)
         {
             if (epreuves.epreuveCompleted)
-            {
-                finalEscaliers.SetActive(true);
+            { 
+                finalEscaliers.SetActive(true); 
                 epreuves.totem.SetActive(true);
-       //         epreuves.destroyedPortal.SetActive(true);
-                epreuves.vfxPortal.SetActive(false);
+               epreuves.destroyedPortal.SetActive(true);
+               epreuves.vfxPortal.SetActive(false);
                 epreuves.portal.SetActive(false);
             }
         }
