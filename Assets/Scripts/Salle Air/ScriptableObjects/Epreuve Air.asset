@@ -15,5 +15,6 @@ MonoBehaviour:
   nom: "Tir \xE0 l'arc"
   epreuveCompleted: 0
   totem: {fileID: 1280227573971359952, guid: 2539be1e1df46a246b862738f8353843, type: 3}
-  portal: {fileID: 0}
-  destroyedportal: {fileID: 0}
+  portal: {fileID: 4426971454332570072, guid: 6a501e9eb9bcae94192ad8db57845c4b, type: 3}
+  vfxPortal: {fileID: 826492207213497709, guid: f9bc349f76898da45bb53dd2b7223ef5,
+    type: 3}

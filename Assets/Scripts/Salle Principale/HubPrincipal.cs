@@ -6,6 +6,8 @@ using UnityEngine;
 public class HubPrincipal : MonoBehaviour
 {
     [SerializeField] private ListeEpreuve _listeEpreuve;
+    [SerializeField] private GameObject finalEscaliers;
+
     private void Start()
     {
         CheckEpreuves();
@@ -17,8 +19,10 @@ public class HubPrincipal : MonoBehaviour
         {
             if (epreuves.epreuveCompleted)
             {
+                finalEscaliers.SetActive(true);
                 epreuves.totem.SetActive(true);
-                epreuves.destroyedportal.SetActive(true);
+       //         epreuves.destroyedPortal.SetActive(true);
+                epreuves.vfxPortal.SetActive(false);
                 epreuves.portal.SetActive(false);
             }
         }

@@ -16,12 +16,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e8e444bc191c6748bbabcfb9ebe6475, type: 2}
   - {fileID: 11400000, guid: 44cf2b2765debaa42a5b1f2e9331f79f, type: 2}
   - {fileID: 11400000, guid: 57ab55de35e74fa42aca91eba27ec62f, type: 2}
-  - {fileID: 11400000, guid: 3368f8f81345c774281b4ce5d9fae7ca, type: 2}
-  - {fileID: 11400000, guid: 54df643b73bccdf4f95a7850beb45544, type: 2}
   - {fileID: 11400000, guid: 361c0482374c5b74a92d22b7b6bcb4a7, type: 2}
   - {fileID: 11400000, guid: 54fc7eb16ecd84741af061227947cf98, type: 2}
   islandComplete: 0
   ScoreTextUI: {fileID: 4222250337145529613, guid: 58752c4fe14ad7b498639a4b67d3640a,
     type: 3}
   targetscore: 0
-  targetNb: 7
+  targetNb: 5

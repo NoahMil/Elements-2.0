@@ -14,6 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Epreuves:
   - {fileID: 11400000, guid: 66908cd13a2b6934196c3cc0bec48108, type: 2}
-  - {fileID: 11400000, guid: 07a3d21e2cc3e544c848a3ef951faf58, type: 2}
-  - {fileID: 11400000, guid: f933f2127fddc9a4ab9a448f3bbf0888, type: 2}
-  - {fileID: 11400000, guid: 3112b4cbcc259664ca5c680852ab0967, type: 2}

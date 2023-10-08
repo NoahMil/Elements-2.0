@@ -13,11 +13,9 @@ public class ScoreArchery : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] _islandsListGUI;
     [SerializeField] private GameObject startMenu;
     public TextMeshProUGUI ScoreText;
-
-    public GameObject totemReward;
-    public int score = 0;
+    [SerializeField] GameObject vfxPortail;
+    private int score = 0;
     
-
     private void OnEnable()
     {
         FloatingTarget.OnCheckArchery += CheckArchery;
@@ -32,12 +30,13 @@ public class ScoreArchery : MonoBehaviour
     private void Start()
     {
         score = 0;
+        vfxPortail.SetActive(false);
+
         foreach (Island island in _islandsList)
         {
             island.targetscore = 0;
             island.islandComplete = false;
         }
-        
     }
 
     public void UpdateScore()
@@ -94,7 +93,7 @@ public class ScoreArchery : MonoBehaviour
                     if (AreAllIslandsComplete())
                     {
                         AirScriptable.epreuveCompleted = true;
-                        totemReward.SetActive(true);
+                        vfxPortail.SetActive(true);
                         startMenu.SetActive(false);
                     }
                 }

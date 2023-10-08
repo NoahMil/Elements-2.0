@@ -9,7 +9,8 @@ public class Epreuve : ScriptableObject
     public bool epreuveCompleted = false ;
     public GameObject totem;
     public GameObject portal;
-    public GameObject destroyedportal;
+    public GameObject vfxPortal;
+ //   public GameObject destroyedPortal;
 
 }
 
