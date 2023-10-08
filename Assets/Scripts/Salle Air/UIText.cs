@@ -9,8 +9,7 @@ public class UIText : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] textOptions;
     public float changeInterval;
-    [SerializeField] private Transform player;
-
+    
     private int currentIndex = 0;
     private float timer = 0f;
 
@@ -30,12 +29,5 @@ public class UIText : MonoBehaviour
             textComponent.text = textOptions[currentIndex];
             timer = 0f;
         }
-        
-        Vector3 direction = player.position - transform.position;
-        direction.y = 0; 
-        
-        Quaternion newRotation = Quaternion.LookRotation(-direction);
-        
-        transform.rotation = newRotation;
     }
 }

@@ -16,7 +16,6 @@ public class Totem : MonoBehaviour
     {
         startTime = Time.time;
         AudioSource.PlayClipAtPoint(mysteriousSE.clip, transform.position);
-
     }
 
     void Update()

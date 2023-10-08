@@ -1,22 +1,19 @@
-using System;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TeleportWaypoint : MonoBehaviour
 {
     public Material normalMaterial;
-    public VRControllerInput _vrControllerInput;
     public Material selectedMaterial;
     private Renderer waypointRenderer;
     private bool isSelected;
     public GameObject pointer;
-    public float prefabHeight = 2.0f;
-    public Vector3 prefabRotation;
     public GameObject spawnPositionPlayer;
+    public GameObject spawnPositionUI;
     private GameObject spawnedPrefab;
-    public AudioSource teleportSE;
     public GameObject[] islandSelectedPlan;
-    public int test;
+    public Sprite uiImage; 
 
 
     void Start()
@@ -25,41 +22,49 @@ public class TeleportWaypoint : MonoBehaviour
         waypointRenderer.material = normalMaterial;
     }
     
-    public void Selected(int index)
-    {
-        SetSelected(true, index);
-        test = index;
-    }
-    
-    
-    
     public void SetSelected(bool selected, int index)
     {
+        if (selected)
+        {
+            for (int i = 0; i < islandSelectedPlan.Length; i++)
+            {
+                if (i != index && islandSelectedPlan[i] != null)
+                {
+                    islandSelectedPlan[i].SetActive(false);
+                }
+            }
+        }
+
         isSelected = selected;
         waypointRenderer.material = selected ? selectedMaterial : normalMaterial;
-        if (selected && pointer != null && islandSelectedPlan[index] != null)
+
+        if (selected && pointer != null && islandSelectedPlan != null && index >= 0 && index < islandSelectedPlan.Length)
         {
             pointer.SetActive(true);
             islandSelectedPlan[index].SetActive(true);
         }
-
         else
         {
-            if (pointer != null && islandSelectedPlan[index] != null)
+            if (pointer != null && islandSelectedPlan != null && index >= 0 && index < islandSelectedPlan.Length)
             {
                 pointer.SetActive(false);
-                islandSelectedPlan[index].SetActive(false); 
-            } 
+                islandSelectedPlan[index].SetActive(false);
+            }
         }
     }
 
     public void TeleportPlayer(Transform playerTransform)
     {
-        teleportSE.Play();
         playerTransform.position = spawnPositionPlayer.transform.position;
         playerTransform.rotation = spawnPositionPlayer.transform.rotation;
     }
-}
 
+    public void TeleportUI(RectTransform uiTransform)
+    {
+        uiTransform.position = spawnPositionUI.transform.position;
+        uiTransform.rotation = spawnPositionUI.transform.rotation;
+        uiTransform.GetComponent<Image>().sprite = uiImage;
+    }
+}
 
 

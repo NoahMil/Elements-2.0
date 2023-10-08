@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &383094534927891913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8387215868228077794}
+  m_Layer: 0
+  m_Name: UI Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8387215868228077794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383094534927891913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3433001390192574166}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2661530896781927532
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,6 +64,7 @@ Transform:
   m_Children:
   - {fileID: 6175092113264930490}
   - {fileID: 7133844248275775506}
+  - {fileID: 8387215868228077794}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,16 +131,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalMaterial: {fileID: 2100000, guid: ce6b387709e178145bf8976a9f600270, type: 2}
-  _vrControllerInput: {fileID: 1839870376326598079, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
-    type: 3}
   selectedMaterial: {fileID: 2100000, guid: 5ae44c0afdcda7e4aae648d8136bdb8d, type: 2}
   pointer: {fileID: 7515189603624594088}
-  prefabHeight: 9
-  prefabRotation: {x: 90, y: 90, z: 0}
   spawnPositionPlayer: {fileID: 6639744195957743030}
-  teleportSE: {fileID: 1839870376326598078, guid: ba0a7f6d411e1cc4fa0be8e922ad958e,
-    type: 3}
+  spawnPositionUI: {fileID: 383094534927891913}
   islandSelectedPlan: []
+  uiImage: {fileID: 0}
 --- !u!1 &6639744195957743030
 GameObject:
   m_ObjectHideFlags: 0

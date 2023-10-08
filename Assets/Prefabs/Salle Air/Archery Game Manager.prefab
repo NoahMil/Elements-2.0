@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1839870376160620113
+--- !u!1 &9035591514374021704
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1839870376326598018}
-  - component: {fileID: 1839870376326598072}
-  - component: {fileID: 1839870376326598079}
-  - component: {fileID: 1839870376326598078}
+  - component: {fileID: 8570347006290858958}
+  - component: {fileID: 868438119708359912}
+  - component: {fileID: 8570347006290858995}
+  - component: {fileID: 8570347006290858994}
   m_Layer: 0
   m_Name: Archery Game Manager
   m_TagString: Untagged
@@ -19,13 +19,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1839870376326598018
+--- !u!4 &8570347006290858958
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839870376160620113}
+  m_GameObject: {fileID: 9035591514374021704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1839870376326598072
+--- !u!114 &868438119708359912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839870376160620113}
+  m_GameObject: {fileID: 9035591514374021704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 513783208ecfcf946a56dfe522fbc18d, type: 3}
@@ -55,17 +55,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 070c267dfe3cb2c4f8ff711833b18f93, type: 2}
   - {fileID: 11400000, guid: e30a0be91acb2644baf110a9ab2cdd77, type: 2}
   - {fileID: 11400000, guid: 945c95c6b33021b4aad9d6fb4aa4105e, type: 2}
+  _islandsListGUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   startMenu: {fileID: 0}
   ScoreText: {fileID: 0}
   totemReward: {fileID: 0}
   score: 0
---- !u!114 &1839870376326598079
+--- !u!114 &8570347006290858995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839870376160620113}
+  m_GameObject: {fileID: 9035591514374021704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0388c38890e50a343aa91ba400fb387a, type: 3}
@@ -73,11 +81,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputSource1: 5
   inputSource2: 4
-  inputButton11: 6
-  inputButton12: 0
   inputButton21: 8
   inputButton22: 6
-  inputButton23: 3
+  inputButton23: 0
   InputThreshold: 1
   playerTransform: {fileID: 0}
   waypoints:
@@ -88,14 +94,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  isLeftHanded: 0
---- !u!82 &1839870376326598078
+  currentIndex: 0
+  teleportSE: {fileID: 0}
+--- !u!82 &8570347006290858994
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839870376160620113}
+  m_GameObject: {fileID: 9035591514374021704}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
