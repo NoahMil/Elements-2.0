@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneManagement : MonoBehaviour
+public class SceneManagementMenu : MonoBehaviour
 {
     public int sceneIndex;
     public FadeScreen fadeScreen;
     public AudioSource teleportationSE;
-    
+    [SerializeField] private ListeEpreuve _listeEpreuve;
+
     private void OnTriggerEnter(Collider other)
     {
         teleportationSE.Play();
@@ -18,6 +19,10 @@ public class SceneManagement : MonoBehaviour
     public void GoToScene(int sceneIndex)
     {
         StartCoroutine(GoToSceneRoutine(sceneIndex));
+        foreach (Epreuve epreuves in _listeEpreuve.Epreuves)
+        {
+            epreuves.epreuveCompleted = false;
+        }
     }
 
     IEnumerator GoToSceneRoutine(int sceneIndex)

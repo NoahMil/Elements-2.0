@@ -1170,7 +1170,7 @@ MonoBehaviour:
   scrollSpeed: 35
   maxLinesOnScreen: 1
   _SceneManagement: {fileID: 927608432}
-  waitingTime: 110
+  waitingTime: 80
 --- !u!1 &1039319328
 GameObject:
   m_ObjectHideFlags: 0

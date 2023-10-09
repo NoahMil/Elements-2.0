@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 826492207213497683}
   - component: {fileID: 826492207213497687}
   - component: {fileID: 826492207213497680}
-  - component: {fileID: 826492207162795509}
+  - component: {fileID: 3026241811702303886}
   m_Layer: 0
   m_Name: VFX Portail Air
   m_TagString: Untagged
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 2
   fadeScreen: {fileID: 0}
-  teleportationSE: {fileID: 826492207162795509}
+  teleportationSE: {fileID: 3026241811702303886}
 --- !u!65 &826492207213497680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000002, y: 2.0183675, z: 10.000002}
   m_Center: {x: -9.178485e-17, y: -0.048630804, z: 6.21031e-16}
---- !u!82 &826492207162795509
+--- !u!82 &3026241811702303886
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +139,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 08e42342886a9e14d90f4db73ea4e277, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ae47579ff5244b44bad21d34053f41f2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -11,14 +11,14 @@ public class HubPrincipal : MonoBehaviour
     [SerializeField] private GameObject destroyedPortal;
     [SerializeField] private GameObject portal;
     [SerializeField] private GameObject VFXPortal;
-
-
+    
     private void Start()
     {
         CheckEpreuves();
         
         foreach (Epreuve epreuves in _listeEpreuve.Epreuves)
         {
+            if (epreuves.epreuveCompleted == false)
             { 
                 finalEscaliers.SetActive(false);
                 totem.SetActive(false);
@@ -44,8 +44,8 @@ public class HubPrincipal : MonoBehaviour
             { 
                 finalEscaliers.SetActive(true);
                 totem.SetActive(true);
+                portal.SetActive(false);
                 destroyedPortal.SetActive(true);
-                portal.SetActive(true);
                 VFXPortal.SetActive(false);
                 /*
                 epreuves.totem.SetActive(true);

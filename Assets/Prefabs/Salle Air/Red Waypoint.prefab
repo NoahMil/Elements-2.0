@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1732657728118501747}
   - component: {fileID: 4606993646326531513}
   - component: {fileID: 1852095206724301863}
+  - component: {fileID: 8975703433502387047}
   m_Layer: 0
   m_Name: Red Waypoint
   m_TagString: Untagged
@@ -137,6 +138,20 @@ MonoBehaviour:
   spawnPositionUI: {fileID: 383094534927891913}
   islandSelectedPlan: []
   uiImage: {fileID: 0}
+--- !u!64 &8975703433502387047
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661530896781927532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3173784524337873276, guid: 306e94c97c343c94c8e09443e612a4bd, type: 3}
 --- !u!1 &6639744195957743030
 GameObject:
   m_ObjectHideFlags: 0

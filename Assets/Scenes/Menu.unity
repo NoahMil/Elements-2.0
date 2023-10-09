@@ -1556,7 +1556,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 426132985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 685377551}
+        m_TargetAssemblyTypeName: GameStartMenu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &426132985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2868,7 +2880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 927608431}
   - component: {fileID: 927608430}
-  - component: {fileID: 927608432}
+  - component: {fileID: 927608434}
   - component: {fileID: 927608433}
   m_Layer: 0
   m_Name: Scene Manager
@@ -2904,22 +2916,6 @@ Transform:
   m_Father: {fileID: 253327498}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &927608432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927608429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737162ae704f1b2488b2d97cc03df7da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneIndex: 0
-  fadeScreen: {fileID: 3127377416852887304, guid: e367714f162349d48a5cb6f00133e149,
-    type: 3}
-  teleportationSE: {fileID: 927608433}
 --- !u!82 &927608433
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2930,7 +2926,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 08e42342886a9e14d90f4db73ea4e277, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ae47579ff5244b44bad21d34053f41f2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3016,6 +3012,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &927608434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927608429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88156ac740e23c44f8690a78ae64f342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 0
+  fadeScreen: {fileID: 1118871718}
+  teleportationSE: {fileID: 927608433}
+  _listeEpreuve: {fileID: 11400000, guid: 36bfbb59a08fef04ea835f82d77f3683, type: 2}
 --- !u!1 &1016170350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,6 +3246,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6817538424877031001}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1118871718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3127377416852887304, guid: e367714f162349d48a5cb6f00133e149,
+    type: 3}
+  m_PrefabInstance: {fileID: 6817538424877031001}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2d507c3ae9dc744a28e79d568b5806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1185359579
 GameObject:
   m_ObjectHideFlags: 0
@@ -5489,8 +5513,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 927608432}
-        m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
+      - m_Target: {fileID: 927608434}
+        m_TargetAssemblyTypeName: SceneManagementMenu, Assembly-CSharp
         m_MethodName: GoToScene
         m_Mode: 3
         m_Arguments:
