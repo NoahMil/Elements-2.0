@@ -14,6 +14,7 @@ public class ScoreArchery : MonoBehaviour
     [SerializeField] private GameObject startMenu;
     public TextMeshProUGUI ScoreText;
     [SerializeField] GameObject vfxPortail;
+    [SerializeField] private AudioSource mysteriousSE;
     private int score = 0;
     
     private void OnEnable()
@@ -95,6 +96,7 @@ public class ScoreArchery : MonoBehaviour
                         AirScriptable.epreuveCompleted = true;
                         vfxPortail.SetActive(true);
                         startMenu.SetActive(false);
+                        mysteriousSE.Play();
                     }
                 }
             }
