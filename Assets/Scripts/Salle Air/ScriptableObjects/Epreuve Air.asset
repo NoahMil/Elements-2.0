@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Epreuve Air
   m_EditorClassIdentifier: 
   nom: "Tir \xE0 l'arc"
-  epreuveCompleted: 0
+  epreuveCompleted: 1
   totem: {fileID: 1280227573971359952, guid: 2539be1e1df46a246b862738f8353843, type: 3}
   portal: {fileID: 4426971454332570072, guid: 6a501e9eb9bcae94192ad8db57845c4b, type: 3}
   vfxPortal: {fileID: 826492207213497709, guid: f9bc349f76898da45bb53dd2b7223ef5,
+    type: 3}
+  destroyedPortal: {fileID: 3450244719020067000, guid: f46f7b8a45c295b48a73df3ac4db7465,
     type: 3}

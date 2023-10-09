@@ -1147,6 +1147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 0
   fadeScreen: {fileID: 1676883477}
+  teleportationSE: {fileID: 0}
 --- !u!114 &927608433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1160,16 +1161,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   play: 1
-  delay: 0
+  delay: -5
   textTrans: {fileID: 847636916}
   text: {fileID: 847636917}
   creditsFile: {fileID: 4900000, guid: 2d115b70b8d312a42a33da7e6d185cff, type: 3}
   lineHeight: 0
-  yDistance: 300
-  scrollSpeed: 25
+  yDistance: 250
+  scrollSpeed: 35
   maxLinesOnScreen: 1
   _SceneManagement: {fileID: 927608432}
-  waitingTime: 130
+  waitingTime: 110
 --- !u!1 &1039319328
 GameObject:
   m_ObjectHideFlags: 0
@@ -5385,7 +5386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7065423995050554138
 Transform:
   m_ObjectHideFlags: 0
@@ -5740,7 +5741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8360024630184866142
 MonoBehaviour:
   m_ObjectHideFlags: 0
